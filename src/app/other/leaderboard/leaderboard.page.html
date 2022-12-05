@@ -1,0 +1,2013 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>{{'Classement BetGame' | translate}}</ion-title>
+    </ion-toolbar>
+
+    <div class="list_header d-flex">
+        <h2>{{'Classement' | translate}}</h2>
+
+        <div class="select_box end d-flex">
+            <ion-select mode="md" interface="popover" [(ngModel)]="series">
+                <ion-select-option value="1">{{'Différentes catégories' | translate}}</ion-select-option>
+                <ion-select-option value="2">{{'Meilleur Buteur' | translate}}</ion-select-option>
+                <ion-select-option value="3">{{'Meilleur Ratio Win/Lose' | translate}}</ion-select-option>
+                <ion-select-option value="4">{{'Meilleur Possession' | translate}} 3</ion-select-option>
+                <ion-select-option value="5">{{'Plus grand nombre de tournois gagné' | translate}} 4</ion-select-option>
+                <ion-select-option value="6">{{'Plus grand nombre de match gagné' | translate}} 5</ion-select-option>
+            </ion-select>
+            <ion-icon class="zmdi zmdi-caret-down end ion-text-end"></ion-icon>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <ion-list class="leaderboard_list" lines="none">
+        <div class="list_header">
+            <ion-row>
+                <ion-col size="7">
+                    <h2>
+                        {{'pseudo' | translate}}
+                    </h2>
+                </ion-col>
+                <ion-col>
+                    <h2 class="ion-text-center">
+                        {{'points' | translate}}
+                    </h2>
+                </ion-col>
+                <ion-col class="ion-text-end">
+                    <h2>
+                        #{{'rang' | translate}}
+                    </h2>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Samanthateteam123 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>202.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2,551</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Daniel007 <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 99</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>365</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>1</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 97</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>364.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Tomby001 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 92</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>345.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>3</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>KellySmith11team <span>(T5)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>319.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>4</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Team4Win <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>298</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>6</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                            <h4>{{'lavel' | translate}} 88</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>297</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>7</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user8.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>LisaDevis2212 <span>(T7)</span></h3>
+                            <h4>{{'lavel' | translate}} 86</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>296.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>8</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user9.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 82</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>235</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>5</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>DevilTeam077 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 77</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>277</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>9</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+         <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Samanthateteam123 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>202.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2,551</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Daniel007 <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 99</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>365</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>1</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 97</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>364.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Tomby001 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 92</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>345.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>3</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>KellySmith11team <span>(T5)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>319.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>4</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Team4Win <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>298</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>6</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                            <h4>{{'lavel' | translate}} 88</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>297</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>7</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user8.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>LisaDevis2212 <span>(T7)</span></h3>
+                            <h4>{{'lavel' | translate}} 86</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>296.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>8</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user9.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 82</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>235</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>5</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>DevilTeam077 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 77</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>277</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>9</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item> <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Samanthateteam123 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>202.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2,551</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Daniel007 <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 99</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>365</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>1</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 97</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>364.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Tomby001 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 92</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>345.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>3</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>KellySmith11team <span>(T5)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>319.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>4</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Team4Win <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>298</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>6</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                            <h4>{{'lavel' | translate}} 88</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>297</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>7</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user8.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>LisaDevis2212 <span>(T7)</span></h3>
+                            <h4>{{'lavel' | translate}} 86</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>296.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>8</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user9.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 82</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>235</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>5</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>DevilTeam077 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 77</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>277</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>9</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item> <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Samanthateteam123 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>202.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2,551</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Daniel007 <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 99</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>365</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>1</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 97</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>364.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Tomby001 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 92</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>345.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>3</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>KellySmith11team <span>(T5)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>319.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>4</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Team4Win <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>298</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>6</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                            <h4>{{'lavel' | translate}} 88</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>297</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>7</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user8.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>LisaDevis2212 <span>(T7)</span></h3>
+                            <h4>{{'lavel' | translate}} 86</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>296.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>8</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user9.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 82</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>235</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>5</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>DevilTeam077 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 77</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>277</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>9</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item> <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Samanthateteam123 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>202.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2,551</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Daniel007 <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 99</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>365</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>1</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 97</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>364.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Tomby001 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 92</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>345.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>3</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>KellySmith11team <span>(T5)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>319.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>4</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Team4Win <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>298</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>6</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                            <h4>{{'lavel' | translate}} 88</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>297</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>7</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user8.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>LisaDevis2212 <span>(T7)</span></h3>
+                            <h4>{{'lavel' | translate}} 86</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>296.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>8</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user9.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 82</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>235</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>5</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>DevilTeam077 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 77</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>277</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>9</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item> <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Samanthateteam123 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>202.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2,551</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Daniel007 <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 99</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>365</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>1</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 97</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>364.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Tomby001 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 92</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>345.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>3</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>KellySmith11team <span>(T5)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>319.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>4</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Team4Win <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>298</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>6</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                            <h4>{{'lavel' | translate}} 88</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>297</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>7</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user8.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>LisaDevis2212 <span>(T7)</span></h3>
+                            <h4>{{'lavel' | translate}} 86</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>296.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>8</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user9.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 82</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>235</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>5</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>DevilTeam077 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 77</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>277</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>9</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item> <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Samanthateteam123 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>202.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2,551</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Daniel007 <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 99</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>365</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>1</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 97</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>364.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Tomby001 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 92</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>345.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>3</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>KellySmith11team <span>(T5)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>319.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>4</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Team4Win <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>298</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>6</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                            <h4>{{'lavel' | translate}} 88</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>297</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>7</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user8.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>LisaDevis2212 <span>(T7)</span></h3>
+                            <h4>{{'lavel' | translate}} 86</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>296.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>8</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user9.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 82</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>235</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>5</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>DevilTeam077 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 77</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>277</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>9</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item> <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Samanthateteam123 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>202.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2,551</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Daniel007 <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 99</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>365</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>1</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 97</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>364.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Tomby001 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 92</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>345.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>3</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>KellySmith11team <span>(T5)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>319.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>4</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Team4Win <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>298</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>6</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                            <h4>{{'lavel' | translate}} 88</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>297</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>7</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user8.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>LisaDevis2212 <span>(T7)</span></h3>
+                            <h4>{{'lavel' | translate}} 86</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>296.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>8</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user9.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 82</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>235</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>5</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>DevilTeam077 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 77</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>277</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>9</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item> <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user1.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Samanthateteam123 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>202.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2,551</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user2.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Daniel007 <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 99</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>365</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>1</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user3.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 97</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>364.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>2</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user4.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Tomby001 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 92</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>345.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>3</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user5.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>KellySmith11team <span>(T5)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>319.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>4</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user6.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Team4Win <span>(T2)</span></h3>
+                            <h4>{{'lavel' | translate}} 89</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>298</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>6</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user7.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                            <h4>{{'lavel' | translate}} 88</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>297</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>7</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user8.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>LisaDevis2212 <span>(T7)</span></h3>
+                            <h4>{{'lavel' | translate}} 86</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>296.5</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>8</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user9.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 82</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>235</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>5</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+
+        <ion-item class="animate__animated animate__fadeInUp">
+            <div class="item-inner">
+                <ion-row>
+                    <ion-col class="d-flex" size="7">
+                        <div class="img_box center_img">
+                            <img src="assets/images/users/user10.png" class="crop_img">
+                        </div>
+                        <div class="text_box">
+                            <h3>DevilTeam077 <span>(T1)</span></h3>
+                            <h4>{{'lavel' | translate}} 77</h4>
+                        </div>
+                    </ion-col>
+                    <ion-col class="ion-text-center">
+                        <h3>277</h3>
+                    </ion-col>
+                    <ion-col class="ion-text-end">
+                        <h3>9</h3>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

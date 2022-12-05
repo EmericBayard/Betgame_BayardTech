@@ -1,0 +1,727 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <!--<h3 class="ion-text-center">0h 9m left</h3>-->
+
+                <span class="end">
+                    <ion-icon class="zmdi zmdi-notifications-add ion-text-start" (click)="reminder()"></ion-icon>
+                    <ion-icon class="zmdi zmdi-balance-wallet ion-text-end" (click)="wallet()"></ion-icon>
+                </span>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <div class="banner">
+        <div class="team-info">
+            
+            <div class="league">
+                <!--<h6>Premier {{'league' | translate}}</h6>-->
+            </div>
+            <!--<ion-row>
+                <ion-col class="team_1 animate__animated animate__fadeInLeft wow" data-wow-duration=".2s"  size="6">
+                    <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                    <div class="team-detail ion-padding-start">
+                        <h3 class="ion-text-start">Wolves United</h3>
+                        <div class="team-logo d-flex">
+                            <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                            <h4>WlS</h4>
+                        </div>
+                    </div>
+                </ion-col>
+
+                <div class="timeing animate__animated animate__zoomIn wow" data-wow-duration=".3s">
+                    <h6>{{'vs' | translate}}</h6>
+                </div>
+
+                <ion-col class="d-flex team_2 animate__animated animate__fadeInRight wow" data-wow-duration=".2s"  size="6">
+                    <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                    <div class="team-detail end ion-padding-end">
+                        <h3 class="ion-text-end">Cobra Guardians</h3>
+                        <div class="team-logo d-flex">
+                            <h4>CBR</h4>&nbsp;&nbsp;
+                            <img src="assets/images/team_logo/team_7.png">
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>-->
+
+            <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+                <!--<ion-segment-button mode="ios"  class="animate__animated animate__zoomIn wow" data-wow-duration=".2s" value="0">
+                    <ion-label class="ion-text-center">
+                        {{'contests' | translate}}
+                    </ion-label>
+                </ion-segment-button>
+                <ion-segment-button mode="ios"  class="animate__animated animate__zoomIn wow" data-wow-duration=".25s" value="1">
+                    <ion-label class="ion-text-center">
+                        {{'my_contests' | translate}} (2)
+                    </ion-label>
+                </ion-segment-button>-->
+                <ion-segment-button mode="ios"  class="animate__animated animate__zoomIn wow" data-wow-duration=".3s" value="2">
+                    <ion-label class="ion-text-center">
+                        {{'mt_team' | translate}} (3)
+                    </ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+    </div>
+</ion-header>
+<div class="background center_img">
+    <img src="assets/images/ground.png" class="crop_img">
+</div>
+<ion-content class="bg_color">
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+        <!--<ion-slide>
+            <ion-list lines="none">
+                <h2> {{'max_contests' | translate}}</h2>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'multiple_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$5,00,000 <sub>60% {{'winners' | translate}} | 1<sup>st</sup> $50,000</sub></h4>
+                                <h5 class="end">$20</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width: 80%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">10,000 {{'spots' | translate}} <span class="end">3,875 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'multiple_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$1,00,000 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $10,000</sub></h4>
+                                <h5 class="end">$15</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width: 90%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">30,000 {{'spots' | translate}} <span class="end">5,670 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <h2> {{'head_to_head' | translate}}</h2>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$500 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $500</sub></h4>
+                                <h5 class="end">$260</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width: 50%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">1 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$500 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $500</sub></h4>
+                                <h5 class="end">$260</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width: 50%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">1 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$500 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $500</sub></h4>
+                                <h5 class="end">$260</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width: 50%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">1 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$500 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $500</sub></h4>
+                                <h5 class="end">$260</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width: 50%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">1 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$500 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $500</sub></h4>
+                                <h5 class="end">$260</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width: 50%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">1 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$500 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $500</sub></h4>
+                                <h5 class="end">$260</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width: 50%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">1 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$100 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $50</sub></h4>
+                                <h5 class="end">$52</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width:  0%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">2 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>-->
+
+
+        <!--<ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'multiple_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$5,00,000 <sub>60% {{'winners' | translate}} | 1<sup>st</sup> $50,000</sub></h4>
+                                <h5 class="end">$20</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width: 80%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">10,000 {{'spots' | translate}} <span class="end">3,875 {{'spots_left' | translate}}</span></h6>
+                        </div>
+                        <div class="item-footer d-flex">
+                            <h3>{{'joinned_with' | translate}} 2 {{'teams' | translate}}</h3>
+                            <p class="end">
+                                <span>T2</span>
+                                <span>T1</span>
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <div class="item-content">
+                            <h3 class="d-flex">
+                                {{'prize_pool' | translate}}
+                                <span class="end">{{'single_entries' | translate}} </span>
+                            </h3>
+                            <div class="amount_details d-flex">
+                                <h4>$500 <sub>50% {{'winners' | translate}} | 1<sup>st</sup> $500</sub></h4>
+                                <h5 class="end contest_full">$260</h5>
+                            </div>
+                            <div class="progress_bar">
+                                <div class="progress_bar_active" style="width: 100%">
+                                </div>
+                            </div>
+                            <h6 class="d-flex">2 {{'spots' | translate}} <span class="end">{{'contest_full' | translate}}</span></h6>
+                        </div>
+                        <div class="item-footer d-flex">
+                            <h3>{{'joinned_with' | translate}} 1 {{'teams' | translate}}</h3>
+                            <p class="end">
+                                <span>T2</span>
+                                span>T1</span>
+                            </p>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>-->
+
+        <ion-slide> 
+            <ion-list class="my_team" lines="none">
+                <ion-item class="animate__animated animate__fadeInUp" (click)="edit_team()">
+                    <div class="item-inner">
+                        <div class="item_bg center_img">
+                            <img src="assets/images/ground.png" class="crop_img">
+                        </div>
+                        <div class="item-content">
+                            <ion-row>
+                                <ion-col size="5">
+                                    <h3>Samanthateam123</h3>
+                                    <h4 class="d-flex">
+                                        <span><strong>5</strong>V</span>
+                                        <span><strong>6</strong>D</span>
+                                    </h4>
+                                </ion-col>
+
+                                <ion-col size="7">
+                                    <div class="team_captains d-flex">
+                                        <div class="team_captains_inner">
+                                            <p>C</p>
+                                            <div class="img_box center_img">
+                                                <img src="assets/images/players/player1.png" class="crop_img">
+                                            </div>
+                                            <h5 class="ion-text-center" style="background: #6A37FF;">P Williamson</h5>
+                                        </div>
+
+                                        <div class="team_captains_inner">
+                                            <p>VC</p>
+                                            <div class="img_box center_img">
+                                                <img src="assets/images/players/player2.png" class="crop_img">
+                                            </div>
+                                            <h5 class="ion-text-center" style="background: #21B5F6;">B Cordero</h5>
+                                        </div>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+
+                        <div class="item-footer">
+                            <ion-row>
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">G <span>(1)</span></h6>
+                                </ion-col>
+
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">D <span>(3)</span></h6>
+                                </ion-col>
+
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">M<span>(4)</span></h6>
+                                </ion-col>
+
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">BU <span>(3)</span></h6>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="edit_team()">
+                    <div class="item-inner">
+                        <div class="item_bg center_img">
+                            <img src="assets/images/ground.png" class="crop_img">
+                        </div>
+                        <div class="item-content">
+                            <ion-row>
+                                <ion-col size="5">
+                                    <h3>Samanthateam123</h3>
+                                    <h4 class="d-flex">
+                                        <span><strong>7</strong>V</span>
+                                        <span><strong>4</strong>D</span>
+                                    </h4>
+                                </ion-col>
+
+                                <ion-col size="7">
+                                    <div class="team_captains d-flex">
+                                        <div class="team_captains_inner">
+                                            <p>C</p>
+                                            <div class="img_box center_img">
+                                                <img src="assets/images/players/player6.png" class="crop_img">
+                                            </div>
+                                            <h5 class="ion-text-center" style="background: #6A37FF;">J Caven</h5>
+                                        </div>
+
+                                        <div class="team_captains_inner">
+                                            <p>VC</p>
+                                            <div class="img_box center_img">
+                                                <img src="assets/images/players/player9.png" class="crop_img">
+                                            </div>
+                                            <h5 class="ion-text-center" style="background: #6A37FF;">J Donald</h5>
+                                        </div>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+
+                        <div class="item-footer">
+                            <ion-row>
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">G <span>(1)</span></h6>
+                                </ion-col>
+
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">D <span>(3)</span></h6>
+                                </ion-col>
+
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">M<span>(4)</span></h6>
+                                </ion-col>
+
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">BU <span>(3)</span></h6>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="edit_team()">
+                    <div class="item-inner">
+                        <div class="item_bg center_img">
+                            <img src="assets/images/ground.png" class="crop_img">
+                        </div>
+                        <div class="item-content">
+                            <ion-row>
+                                <ion-col size="5">
+                                    <h3>Samanthateam123</h3>
+                                    <h4 class="d-flex">
+                                        <span><strong>7</strong>V</span>
+                                        <span><strong>4</strong>D</span>
+                                    </h4>
+                                </ion-col>
+
+                                <ion-col size="7">
+                                    <div class="team_captains d-flex">
+                                        <div class="team_captains_inner">
+                                            <p>C</p>
+                                            <div class="img_box center_img">
+                                                <img src="assets/images/players/player4.png" class="crop_img">
+                                            </div>
+                                            <h5 class="ion-text-center" style="background: #6A37FF;">R Simmons</h5>
+                                        </div>
+
+                                        <div class="team_captains_inner">
+                                            <p>VC</p>
+                                            <div class="img_box center_img">
+                                                <img src="assets/images/players/player10.png" class="crop_img">
+                                            </div>
+                                            <h5 class="ion-text-center" style="background: #6A37FF;">W Ubon..</h5>
+                                        </div>
+                                    </div>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+
+                        <div class="item-footer">
+                            <ion-row>
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">G <span>(1)</span></h6>
+                                </ion-col>
+
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">D <span>(3)</span></h6>
+                                </ion-col>
+
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">M<span>(4)</span></h6>
+                                </ion-col>
+
+                                <ion-col size="3">
+                                    <h6 class="ion-text-center">BU <span>(3)</span></h6>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-button size="large" class="btn animate__animated animate__zoomIn" data-wow-duration=".4s"  expand="round" (click)="create_new_team()">{{'create_team' | translate}}</ion-button>
+            </ion-list>
+        </ion-slide>
+    </ion-slides>
+</ion-content>

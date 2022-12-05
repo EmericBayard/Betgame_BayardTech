@@ -1,0 +1,293 @@
+$font-stack: proxima-nova, proxima-nova-1, proxima-nova-2, "Proxima Nova", arial, helvetica, sans-serif;
+body {
+  background: #F2F2F2;
+  margin: 0;
+}
+
+ion-header {
+  background: var(--bg-color);
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 88px);
+    background: #391531;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 0 20px 20px;
+  }
+
+  ion-toolbar ion-title {
+    padding: 0 20px !important;
+
+    .title-inner {
+      min-height: 70px;
+
+      .logo {
+        min-width: fit-content;
+        max-width: 50%;
+        img {
+          width: 37px;
+          display: block;
+        }
+
+      }
+
+      h3 {
+        display: flex;
+        align-items: center;
+        min-width: fit-content;
+        max-width: 50%;
+        color: var(--white);
+        font-size: .98rem;
+        letter-spacing: .5px;
+
+        img {
+          width: 15px;
+          min-width: 15px;
+        }
+
+        ion-icon {
+          font-size: 1.35rem;
+          min-width: fit-content;
+          padding: 0 2px;
+        }
+      }
+    }
+  }
+
+  h2 {
+    padding: 0 20px;
+    margin: 0;
+    color: var(--text-light);
+    font-size: .8rem;
+    font-weight: 400;
+    padding-bottom: 19px;
+
+    span {
+      min-width: fit-content;
+      background: #ffffff2b;
+      border-radius: 50px;
+      padding: 6px 15px;
+      font-size: .7rem;
+    }
+  }
+}
+
+
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+canvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.scroll-content{
+  height: 100%;
+  //position: relative;
+  z-index: 1;
+  width: 100%;
+  //display: inline-flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.region {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  z-index: 1;
+  display: inline-flex;
+
+  .region-name {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    line-height: 0;
+    margin: -18px 0 0;
+    padding: 0;
+    font: 600 30px $font-stack;
+  }
+}
+
+.round {
+  font: 300 15px $font-stack;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 0 20px;
+  float: left;
+  width: 33.3333333333%;
+  position: relative;
+  z-index: 2;
+  pointer-events: none;
+
+  &.round-collapse {
+    margin-left: -16.666666666%;
+  }
+
+  .game {
+    background: #FFF;
+    border-radius: 3px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, .05);
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    max-height: 80px;
+    pointer-events: auto;
+
+    .team {
+      display: flex;
+      align-items: center;
+      flex: 1 1 40px;
+      cursor: pointer;
+      border-left: 10px solid #DDD;
+      transition: .2s;
+      /* keep this for smoother transitions: */
+      box-shadow: inset 0 40px 0 rgba(255, 255, 255, 0);
+
+      .team-seed {
+        font-size: 10px;
+        color: #999;
+        flex: 0 1 30px;
+        text-align: center;
+        transition: .2s;
+      }
+
+      .team-name {
+        flex: 1 1 auto;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+
+      .team-score {
+        font-weight: 600;
+        flex: 0 1 30px;
+
+        &:empty {
+          display: none;
+        }
+      }
+
+      .team-date {
+
+      }
+
+      &.team-hover {
+        background: #CFC59A;
+        color: #FFF !important;
+        box-shadow: inset 0 40px 0 rgba(255, 255, 255, .2);
+
+        .team-seed {
+          color: #FFF;
+        }
+      }
+
+      &:active {
+        box-shadow: inset 0 40px 0 rgba(255, 255, 255, 0);
+      }
+
+      &.team-loser {
+        background: #F7F7F7;
+        color: #BBB;
+      }
+    }
+  }
+}
+
+.region-right .round {
+  float: right;
+
+  &.round-collapse {
+    margin-left: 0;
+    margin-right: -16.666666666%;
+  }
+
+  .team {
+    border-left: 0;
+    border-right: 10px solid #DDD;
+    flex-direction: row-reverse;
+    text-align: right;
+  }
+}
+
+.round .game {
+  .team-florida {
+    border-color: #6800a5;
+  }
+
+  .team-ua-ms-mary {
+    border-color: #3f519e;
+  }
+
+  .team-colorado {
+    border-color: #6800a5;
+  }
+
+  .team-pitt {
+    border-color: #3f519e;
+  }
+
+  .team-ucla {
+    border-color: #6800a5;
+  }
+
+  .team-tulsa {
+    border-color: #3f519e;
+  }
+
+  .team-vcu {
+    border-color: #6800a5;
+  }
+
+  .team-stephen-f-austin {
+    border-color: #3f519e;
+  }
+
+  .team-kansas {
+    border-color: #6800a5;
+  }
+
+  .team-eastern-kentucky {
+    border-color: #3f519e;
+  }
+
+  .team-new-mexico {
+    border-color: #6800a5;
+  }
+
+  .team-stanford {
+    border-color: #8C1515;
+  }
+
+  .team-syracuse {
+    border-color: #FF5113;
+  }
+
+  .team-western-mich {
+    border-color: #62390E;
+  }
+
+  .team-ohio-st {
+    border-color: #AD0F20;
+  }
+
+  .team-dayton {
+    border-color: #C40023;
+  }
+}

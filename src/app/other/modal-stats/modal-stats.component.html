@@ -1,0 +1,231 @@
+<div class="modal--stats">
+  <h1 class="modal--title">Résultats du match : </h1>
+
+
+  <!--  -->
+  <ul class="modal--list">
+    <li style=" width:90%; height:5%; margin-left:5%;margin-right:5%;">
+      <h3 style="text-align:center;vertical-align: text-top;margin-top: 0px;">Score final :</h3>
+
+      <div style="display:flex; flex-direction:row; width:100%; height:100%; justify-content: center;">
+        <p>{{this.P1stats.home_user_id_score}} - {{this.P2stats.away_user_id_score}}</p>
+      </div>
+    </li>
+    <ion-item class="animate__animated animate__fadeInUp">
+      <ion-grid class="ion-grid" style="padding: 10px;">
+        <!-- possession -->
+        <ion-row style="color: white">
+          <ion-col style="text-align: start">{{this.P1stats.possession}}%</ion-col>
+          <ion-col style="text-align: center">Possession</ion-col>
+          <ion-col style="text-align: end">{{this.P2stats.possession}}%</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col [ngStyle]="setBarPercentile(this.P1stats.possession)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <!-- PLAYER BAR -->
+                  <div class="progress_bar_active_home" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col [ngStyle]="setBarPercentile(this.P2stats.possession)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <!-- OPPONENT BAR -->
+                  <div class="progress_bar_active_away" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <!-- shots on target -->
+        <ion-row style="color: white">
+          <ion-col style="text-align: start">{{this.P1stats.chances}}</ion-col>
+          <ion-col style="text-align: center">Tirs cadrés</ion-col>
+          <ion-col style="text-align: end">{{this.P2stats.chances}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col [ngStyle]="setBar(this.P1stats.chances, this.P2stats.occasions, this.P1stats.chances)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_home" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col [ngStyle]="setBar(this.P1stats.chances, this.P2stats.chances, this.P2stats.chances)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_away" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <!-- shots 
+        <ion-row style="color: white">
+          <ion-col style="text-align: start">{{this.P1stats.tirs}}</ion-col>
+          <ion-col style="text-align: center">Tirs</ion-col>
+          <ion-col style="text-align: end">{{this.P2stats.tirs}}</ion-col>
+        </ion-row>
+        <ion-row >
+          <ion-col [ngStyle]="setBar(this.P1stats.tirs, this.P2stats.shots, this.P1stats.tirs)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_home" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col [ngStyle]="setBar(this.P1stats.tirs, this.P2stats.shots, this.P2stats.tirs)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_away" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>-->
+
+        <!-- shots accuracy -->
+        <ion-row style="color: white">
+          <ion-col style="text-align: start">{{this.P1stats.precision_des_tirs}}%</ion-col>
+          <ion-col style="text-align: center">Précision tirs</ion-col>
+          <ion-col style="text-align: end">{{this.P2stats.precision_des_tirs}}%</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col
+            [ngStyle]="setBar(this.P1stats.precision_des_tirs, this.P2stats.precision_des_tirs, this.P1stats.precision_des_tirs)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_home" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col
+            [ngStyle]="setBar(this.P1stats.precision_des_tirs, this.P2stats.precision_des_tirs, this.P2stats.precision_des_tirs)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_away" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <!-- passes accuracy -->
+        <ion-row style="color: white">
+          <ion-col style="text-align: start">{{this.P1stats.precision_des_passes}}%</ion-col>
+          <ion-col style="text-align: center">Précision passes</ion-col>
+          <ion-col style="text-align: end">{{this.P2stats.precision_des_passes}}%</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col
+            [ngStyle]="setBar(this.P1stats.precision_des_passes, this.P2stats.precision_des_passes, this.P1stats.precision_des_passes)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_home" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col
+            [ngStyle]="setBar(this.P1stats.precision_des_passes, this.P2stats.precision_des_passes, this.P2stats.precision_des_passes)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_away" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <!-- penaltys -->
+        <ion-row style="color: white">
+          <ion-col style="text-align: start">{{this.P1stats.penaltys}}</ion-col>
+          <ion-col style="text-align: center">Penaltys</ion-col>
+          <ion-col style="text-align: end">{{this.P2stats.penaltys}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col [ngStyle]="setBar(this.P1stats.penaltys, this.P2stats.penaltys, this.P1stats.penaltys)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_home" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col [ngStyle]="setBar(this.P1stats.penaltys, this.P2stats.penaltys, this.P2stats.penaltys)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_away" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+
+        <!-- Offsides -->
+        <ion-row style="color: white">
+          <ion-col style="text-align: start">{{this.P1stats.hors_jeu}}</ion-col>
+          <ion-col style="text-align: center">Hors-jeu</ion-col>
+          <ion-col style="text-align: end">{{this.P2stats.hors_jeu}}</ion-col>
+        </ion-row>
+        <ion-row>
+          <ion-col [ngStyle]="setBar(this.P1stats.hors_jeu, this.P2stats.hors_jeu, this.P1stats.hors_jeu)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_home" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+          <ion-col [ngStyle]="setBar(this.P1stats.hors_jeu, this.P2stats.hors_jeu, this.P2stats.hors_jeu)">
+            <div class="item-inner">
+              <div class="item-content">
+                <div class="progress_bar">
+                  <div class="progress_bar_active_away" style="width: 100%">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-item>
+  </ul>
+  <div class="ctrl--btn">
+    <button class="modal--button__close" (click)="dismiss()">Valider</button>
+    <button class="modal--button__close" (click)="editValues(P1stats, P2stats)">Modifier</button>
+  </div>
+</div>

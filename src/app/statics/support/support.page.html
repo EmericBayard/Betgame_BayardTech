@@ -1,0 +1,59 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div class="page-title">
+        <h2 class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">{{'support' | translate}}</h2>
+        <h3 class="animate__animated animate__fadeInUp wow" data-wow-duration=".8s">Contactez nous</h3>
+    </div>
+</ion-header>
+
+
+<ion-content class="bg_color" fullscreen>
+    <div class="background center_img">
+        <img src="assets/images/bg.png" class="crop_img">
+    </div>
+
+    <div class="content-inner">
+        <div class="contacts animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">
+            <ion-row>
+                <ion-col class="d-flex" size="6">
+                    <h2 class="d-flex">
+                        <ion-icon class="zmdi zmdi-email ion-text-start"></ion-icon>
+                        {{'mail_us' | translate}}
+                    </h2>
+                </ion-col>
+            </ion-row>
+        </div>
+
+        <div class="form">
+            <div class="page-title">
+                <h2 class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">{{'write_us' | translate}}</h2>
+                <h3 class="animate__animated animate__fadeInUp wow" data-wow-duration=".5s">{{'let_us_know_your_quary' | translate}}</h3>
+            </div>
+
+            <ion-list class="animate__animated animate__fadeInUp" lines="none">
+                <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">
+                    <div class="item_inner">
+                        <ion-label>{{'phone_number_email' | translate}}</ion-label>
+                        <ion-input mode="md" type="text" placeholder="{{'add_contact_info' | translate}}"></ion-input>
+                    </div>
+                </ion-item>
+
+                <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">
+                    <div class="item_inner">
+                        <ion-label>{{'add_your_issue_feedback' | translate}}</ion-label>
+                        <ion-textarea mode="md" rows="1" auto-grow="true" type="text" placeholder="{{'write_your_message' | translate}}"></ion-textarea>
+                    </div>
+                </ion-item>
+            </ion-list>
+
+            <ion-button size="large" class="btn animate__animated animate__slideInUp wow" data-wow-duration=".6s" expand="round">{{'submit' | translate}}</ion-button>
+        </div>
+    </div>
+
+</ion-content>

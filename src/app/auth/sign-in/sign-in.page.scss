@@ -1,0 +1,152 @@
+.logo {
+    padding: 0 20px;
+    margin: 0 auto;
+    width: 168px;
+    margin-bottom: 25px;
+    position: absolute;
+    top: 10%;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    z-index: 999;
+
+    img {
+        display: block;
+        margin: auto;
+    }
+}
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    img {
+        top: 0;
+    }
+}
+
+ion-footer {
+    position: absolute;
+    bottom: 0;
+    overflow-y: auto;
+    border-radius: 22px 22px 0 0;
+    padding-top: 36px;
+    backdrop-filter: blur(8px);
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--secondary);
+        opacity: 0.8;
+    }
+
+    .form {
+
+        h2 {
+            margin: 0;
+            color: var(--white);
+            font-size: .95rem;
+            letter-spacing: 0.4px;
+            padding: 0;
+            padding-bottom: 26px;
+        }
+
+        ion-list {
+            ion-item {
+                margin-bottom: 38px;
+
+                .input-box {
+                    align-items: flex-end !important;
+
+                    h3 {
+                        margin: 0;
+                        color: var(--white);
+                        font-size: 1.1rem;
+                        min-width: fit-content;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .register {
+        margin-top: 10px;
+    }
+
+    .social_login {
+        width: 100%;
+        position: relative;
+        z-index: 1;
+
+        h3 {
+            margin: 0;
+            color: var(--white);
+            font-size: .98rem;
+            letter-spacing: 0.4px;
+            padding: 25px 0 25px 0;
+            font-weight: 400;
+        }
+
+        .button_container {
+            width: 100%;
+            min-height: 89px;
+            border-radius: 12px 12px 0 0;
+            //              position: absolute;
+            bottom: 0;
+            overflow: hidden;
+            backdrop-filter: blur(0px);
+            position: relative;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                margin: auto;
+                width: 1px;
+                height: 36px;
+                background: var(--white);
+            }
+
+            &::before {
+                width: 100%;
+                height: 100%;
+                background: #88888882;
+            }
+
+            ion-row {
+                width: 100%;
+
+                ion-col {
+                    padding: 0;
+                }
+            }
+
+            .btn {
+                letter-spacing: 0 !important;
+                font-weight: 400;
+                text-transform: unset !important;
+                font-size: .95rem;
+                --background: red;
+            }
+        }
+
+    }
+}

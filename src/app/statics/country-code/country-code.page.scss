@@ -1,0 +1,120 @@
+ion-content {
+    --background: var(--transparent) !important;
+}
+
+
+ion-list {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    border-radius: 13px !important;
+    background-color: var(--secondary) !important;
+    border: 1px solid #d9d9d9;
+    background: var(--bg-color) !important;
+    height: fit-content;
+    max-width: calc(100% - 58px) !important;
+    width: 100%;
+    padding: 0;
+
+    .list_header {
+        background: none !important;
+        padding: 20px 27px 16px 27px;
+        border-bottom: 1px solid #d9d9d9;
+
+        h2 {
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1.2rem;
+            color: var(--white);
+            margin: 0;
+        }
+    }
+
+    ion-radio-group {
+        display: block;
+        width: 100%;
+        max-height: 300px;
+        overflow: hidden;
+        overflow-y: auto;
+    }
+
+    ion-item {
+        padding: 13px 16px 13px 16px;
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --min-height: unset !important;
+        --padding-start: 0;
+        --highligh-color-focused: var(--transparent) !important;
+        --background: var(--transparent);
+        --ripple-color: var(--transparent);
+        border-radius: 5px;
+        width: calc(100% - 13px);
+        margin: 0 auto;
+        margin-bottom: 6px;
+
+        ion-radio {
+            --color-checked: var(--primary);
+            margin: 0;
+            margin-right: 17px;
+            min-width: 20px;
+
+        }
+
+        h3 {
+            margin: 0;
+            font-size: 1.2rem;
+            color: var(--white);
+
+            span {
+                min-width: fit-content;
+            }
+        }
+    }
+
+    .btn_box {
+        position: relative;
+        border-top: 1px solid #d9d9d9;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            width: 1.5px;
+            height: 100%;
+            background-color: var(--white);
+            z-index: 9999;
+            margin: 0 auto;
+
+        }
+
+        ion-row {
+            ion-col {
+                padding: 0;
+
+                .button.btn {
+                    color: var(--white);
+                    --background: var(--secondary-dark) !important;
+                    height: 50px;
+                    text-align: center;
+                    margin: 0;
+                    width: 100%;
+                    font-size: 1rem;
+                    text-transform: uppercase !important;
+                    letter-spacing: 0.7px !important;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+
+//    .button.btn {
+//        width: calc(100% - 35px);
+//        margin: 0 auto;
+//        display: block;
+//    }

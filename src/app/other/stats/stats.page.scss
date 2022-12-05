@@ -1,0 +1,99 @@
+ion-content {
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+    --background: var(--transparent) !important;
+}
+
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    img {
+        top: -29px;
+        min-height: calc(100vh + 29px);
+    }
+}
+
+.content-inner {
+    position: relative;
+    min-height: calc(100vh - 172.2px);
+    max-height: calc(100vh - 172.2px);
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 11;
+    background: var(--secondary);
+
+}
+
+ion-list {
+    margin: 0;
+    background: none;
+
+    ion-item {
+        padding: 14px 20px 14px 20px;
+        min-height: unset !important;
+        --inner-padding-end: 0px;
+        --inner-min-height: unset !important;
+        --min-height: unset !important;
+        --padding-start: 0;
+        --highligh-color-focused: var(--transparent) !important;
+        --highligh-color-focused: var(--transparent) !important;
+        --background: var(--transparent);
+        transition: all .5s;
+
+        .item_inner {
+            width: 100%;
+
+            h3 {
+                margin: 0;
+                color: var(--white);
+                font-weight: 400;
+                font-size: .9rem;
+                letter-spacing: .5px;
+
+                ion-icon {
+                    color: var(--text-light);
+                    font-size: 1.5rem; 
+                    width: 12px;
+                    transition: all .5s;
+                }
+            }
+
+
+
+            .text_box {
+                transition: all .5s;
+                max-height: 0px;
+                overflow: hidden;
+
+                p {
+                    color: var(--white);
+                    font-size: 0.75rem;
+                    font-weight: 300;
+                    line-height: 24px;
+                    margin: 0;
+                    padding-top: 20px;
+                }
+            }
+        }
+
+        &.active {
+            .item_inner {
+                h3 ion-icon {
+                    transform: rotate(180deg);
+                }
+
+                .text_box {
+                    max-height: 100vh !important;
+
+                }
+            }
+        }
+    }
+
+}

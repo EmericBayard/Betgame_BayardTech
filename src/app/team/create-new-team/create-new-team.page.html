@@ -1,0 +1,1761 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <!-- <h3 class="ion-text-center">0h 9m left</h3>-->
+
+                <span class="end">
+                    <!--                    <ion-icon class="zmdi zmdi-notifications-add ion-text-start" (click)="reminder()"></ion-icon>-->
+                    <!--<ion-icon class="zmdi zmdi-eye ion-text-center" (click)="team_preview()"></ion-icon>-->
+                </span>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <div class="banner">
+        <div class="team-info">
+            <!--
+            <div class="league">
+                <h6>Premier {{'league' | translate}}</h6>
+            </div>
+-->
+            <!--<ion-row>
+                <ion-col class="team_1 animate__animated animate__fadeInLeft wow" data-wow-duration=".2s" size="6">
+                    <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                    <div class="team-detail ion-padding-start">
+                        <h3 class="ion-text-start">Wolves United</h3>
+                        <div class="team-logo d-flex">
+                            <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;&nbsp;
+                            <h4>WlS</h4>
+                        </div>
+                        <h5 class="ion-pading-start ion-margin-start ion-text-start">3/11 <small>{{'selection' | translate}}</small></h5>
+                    </div>
+                </ion-col>
+
+                <div class="timeing animate__animated animate__zoomIn wow" data-wow-duration=".3s">
+                    <h6>{{'max' | translate}} 7 {{'player_from_a_team' | translate}}</h6>
+                    <p>2&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;1</p>
+                </div>
+
+                <div class="players_add d-flex animate__animated animate__zoomIn wow" data-wow-duration=".3s">
+                    <ion-icon class="zmdi zmdi-circle active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-circle active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-circle active"></ion-icon>
+                    <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                    <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                    <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                    <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                    <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                    <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                    <ion-icon class="zmdi zmdi-circle"></ion-icon>
+                </div>
+
+
+                <ion-col class="d-flex team_2 animate__animated animate__fadeInRight wow" data-wow-duration=".2s" size="6">
+                    <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                    <div class="team-detail end ion-padding-end">
+                        <h3 class="ion-text-end">Cobra Guardians</h3>
+                        <div class="team-logo d-flex">
+                            <h4>CBR</h4>&nbsp;&nbsp;&nbsp;
+                            <img src="assets/images/team_logo/team_7.png">
+                        </div>
+                        <h5 class="ion-pading-end ion-margin-end ion-text-end">85.5 <small>{{'credit' | translate}}</small></h5>
+                    </div>
+                </ion-col>
+            </ion-row>-->
+
+
+            <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+                <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".2s" value="0">
+                    <ion-label class="ion-text-center">
+                        Gk <small>(1)</small>
+                    </ion-label>
+                </ion-segment-button>
+                <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".25s" value="1">
+                    <ion-label class="ion-text-center">
+                        Def <small>(0)</small>
+                    </ion-label>
+                </ion-segment-button>
+                <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".3s" value="2">
+                    <ion-label class="ion-text-center">
+                        Mid <small>(0)</small>
+                    </ion-label>
+                </ion-segment-button>
+
+                <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".3s" value="3">
+                    <ion-label class="ion-text-center">
+                        St <small>(0)</small>
+                    </ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+
+        <div class="list_header" >
+            <ion-row style="display:flex;flex-direction:row;justify-content:flex-end;">
+                <ion-col size="4">
+                    <h2>{{'select' | translate}} 3-5 {{'defender' | translate}}</h2>
+                </ion-col>
+                <!--<ion-col class="ion-text-start" size="2">
+                    <h3>{{'sel_by' | translate}}</h3>
+                </ion-col>-->
+                <ion-col class="ion-text-center" size="2">
+                    <h3>{{'point' | translate}}</h3>
+                </ion-col>
+                <ion-col class="ion-text-center" size="2">
+                    <h3>{{'credit' | translate}}</h3>
+                </ion-col>
+                <ion-col class="ion-text-center" size="2">
+                    <h2>
+                        <ion-icon class="zmdi zmdi-filter-list"></ion-icon>
+                    </h2>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-header>
+
+<div class="background center_img">
+    <img src="assets/images/ground.png" class="crop_img">
+</div>
+
+<ion-content class="bg_color">
+
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer1 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player4.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>R Jackson</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">10.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer1()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer2 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player6.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>J Caven</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.5</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer2()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer3 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player1.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>P Williamson</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer3()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer4 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player2.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>B Cordero</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer4()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer5 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player7.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>J Donald</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.5</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer5()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer6 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player8.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>R Simmons</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer6()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer7 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player5.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>K Simmons</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer7()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer8 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player9.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>L Opero</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer8()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer9 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player10.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>W Ubon</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">5.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer9()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer10 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>D Danie</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer10()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer11 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>P Johns</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer11()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer45 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player4.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>R Jackson</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">10.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer45()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer46 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player6.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>J Caven</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.5</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer46()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer47 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player1.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>P Williamson</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer47()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer48 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player2.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>B Cordero</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer48()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer49 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player7.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>J Donald</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.5</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer49()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer50 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player8.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>R Simmons</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer50()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer51 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player5.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>K Simmons</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer51()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer52 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player9.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>L Opero</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer52()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer53 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player10.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>W Ubon</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">5.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer53()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer54 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>D Danie</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer54()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer55 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>P Johns</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer55()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+            </ion-list>
+        </ion-slide>
+
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer12 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player4.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>R Jackson</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">10.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer12()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer13 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player6.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>J Caven</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.5</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer13()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer14 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player1.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>P Williamson</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer14()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer15 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player2.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>B Cordero</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer15()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer16 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player7.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>J Donald</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.5</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer16()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer17 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player8.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>R Simmons</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer17()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer18 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player5.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>K Simmons</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer18()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer19 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player9.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>L Opero</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer19()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer20 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player10.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>W Ubon</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">5.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer20()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer21 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>D Danie</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer21()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer22 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>P Johns</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer22()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+            </ion-list>
+        </ion-slide>
+
+
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer23 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player4.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>R Jackson</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">10.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer23()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer24 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player6.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>J Caven</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.5</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer24()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer25 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player1.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>P Williamson</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer25()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer26 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player6.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>B Cordero</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer26()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer27 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player7.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>J Donald</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.5</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer27()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer28 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player8.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>R Simmons</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer28()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer29 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player5.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>K Simmons</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer29()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer30 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player9.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>L Opero</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer30()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer31 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player10.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>W Ubon</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">5.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer31()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer32 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>D Danie</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer32()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer33 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>P Johns</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer33()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+            </ion-list>
+        </ion-slide>
+
+
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer34 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player4.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>R Jackson</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">10.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer35()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer36 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player6.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>J Caven</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.5</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer36()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer37 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player1.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>P Williamson</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer37()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer38 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player2.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>B Cordero</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">9.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer38()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer39 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player7.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>J Donald</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.5</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer5()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer39 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player8.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>R Simmons</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer6()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer40 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player5.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>K Simmons</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer40()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer41 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player9.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>L Opero</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer41()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer42 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player10.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>W Ubon</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">5.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer42()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer43 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>D Danie</h2>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer43()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp" [ngClass]="savePlayer11 ? 'item active' : 'item'">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="6" (click)="player_info()">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h2>P Johns</h2>
+                                    <h4><span style="color: #20B1F2;">WLS</span> {{'sel_by' | translate}} 19.20% </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h3 class="ion-text-center">265</h3>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="player_info()">
+                                <h2 class="ion-text-center">8.0</h2>
+                            </ion-col>
+
+                            <ion-col size="2" (click)="addPlayer11()">
+                                <div class="add_icon">
+                                </div>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+            </ion-list>
+        </ion-slide>
+    </ion-slides>
+</ion-content>
+
+<ion-footer class="ion-no-border" style="width:100%;display:flex;flex-direction:row;justify-content:space-evenly;">
+    <ion-button size="large" class="btn animate__animated animate__zoomIn wow" data-wow-duration=".5s" expand="round" (click)="choose_captain()">Continuer </ion-button>
+    <ion-button size="large" class="btn animate__animated animate__zoomIn wow" data-wow-duration=".5s" expand="round" (click)="searchModal()">Rechercher</ion-button>
+</ion-footer>

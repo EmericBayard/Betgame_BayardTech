@@ -1,0 +1,104 @@
+ion-content {
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+    --background: var(--transparent) !important;
+}
+
+ion-header {
+    background: var(--transparent) !important;
+}
+
+
+.page-title {
+    padding-bottom: 35px;
+
+    .text_box {
+        width: 100%;
+
+        h3 {
+            min-height: unset;
+        }
+    }
+
+    .img_container {
+        position: relative;
+        min-width: 106px;
+        width: fit-content;
+
+        ion-icon {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto 0;
+            background: var(--primary);
+            color: var(--white);
+            font-size: 1.1rem;
+            min-width: 30px;
+            text-align: center;
+            height: 30px;
+            border-radius: 50%;
+            line-height: 31px;
+            z-index: 99;
+        }
+
+        .img_box {
+            min-width: 90px;
+            max-width: 90px;
+            height: 90px;
+            border-radius: 50%;
+        }
+
+    }
+}
+
+
+.content-inner {
+    position: relative;
+    min-height: calc(100vh - 195px);
+    max-height: calc(100vh - 195px);
+    overflow: hidden;
+    overflow-y: auto;
+    padding-top: 15px;
+    z-index: 11;
+    background: var(--secondary);
+}
+
+.form {
+    ion-list {
+        padding-top: 12px;
+        overflow: hidden;
+        overflow-y: auto;
+
+        ion-item {
+            border: none !important;
+            margin-bottom: 25px;
+
+            h2 {
+                margin: 0;
+                color: var(--primary);
+                font-weight: 500;
+                font-size: .95rem;
+            }
+        }
+
+        ion-item.item-datetime {
+            ion-icon {
+                color: var(--text-light);
+                min-width: 24px;
+                font-size: 1rem;
+                padding: 0 2px;
+            }
+        }
+    }
+}
+.scrolling-wrapper {
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+
+    .card {
+      display: inline-block;
+      margin: 2%;
+      font-size: 4em;
+    }
+  }

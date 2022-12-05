@@ -1,0 +1,19 @@
+<div style="background-color:white;width:90vw;height:90vh;margin:auto;overflow-y: scroll;color:#b3b3b3; display:column;align-items: center;
+justify-content: center;">
+    <h1 style="background-color:red;text-align: center;">Résultats du match : </h1>
+    
+      <ul style="list-style-type: none; padding: 0; margin: 0;width:90%; height: 90%; margin-right:5%; margin-left:5%;background-color:pink;display:flex;flex-direction:column;justify-content: space-between;">
+        <li style=" width:90%; height:5%; margin-left:5%;margin-right:5%;">
+          <h3 style="text-align:center;vertical-align: text-top;margin-top: 0px;">Score final :</h3>
+          <div style="display:flex; flex-direction:row; width:100%; height:100%; background-color:red;">
+            <div [ngStyle]="setPossession()">{{joueur1.homeUserIdScore}}</div>
+            <div  style="width:100%; height:100%; ">{{joueur2.homeUserIdScore}}</div>
+          </div>
+        </li>
+      </ul>
+      <h3>{{joueur1.msg}}</h3>
+       
+  <button style="margin:auto;"(click)="dismiss()">
+    Fermer
+  </button>
+</div>

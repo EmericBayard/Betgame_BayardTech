@@ -1,0 +1,468 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <!--<h3 class="ion-text-center">0h 9m left</h3>-->
+
+                <span class="end">
+                    <!--                    <ion-icon class="zmdi zmdi-notifications-add ion-text-start" (click)="reminder()"></ion-icon>-->
+                    <ion-icon class="zmdi zmdi-eye ion-text-center" (click)="edit_team()"></ion-icon>
+                </span>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <div class="banner">
+        <div class="team-info">
+            <!--
+            <div class="league">
+                <h6>Premier {{'league' | translate}}</h6>
+            </div>
+-->
+            <!--<ion-row>
+                <ion-col class="team_1 animate__animated animate__fadeInLeft wow" data-wow-duration=".2s" size="6">
+                    <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                    <div class="team-detail ion-padding-start">
+                        <h3 class="ion-text-start">Wolves United</h3>
+                        <div class="team-logo d-flex">
+                            <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;&nbsp;
+                            <h4>WlS</h4>
+                        </div>
+                    </div>
+                </ion-col>
+
+                <div class="timeing animate__animated animate__zoomIn wow" data-wow-duration=".3s">
+                    <h6>&nbsp;</h6>
+                    <p>5&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;6</p>
+                </div>
+
+                <ion-col class="d-flex team_2 animate__animated animate__fadeInRight wow" data-wow-duration=".2s" size="6">
+                    <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                    <div class="team-detail end ion-padding-end">
+                        <h3 class="ion-text-end">Cobra Guardians</h3>
+                        <div class="team-logo d-flex">
+                            <h4>CBR</h4>&nbsp;&nbsp;&nbsp;
+                            <img src="assets/images/team_logo/team_7.png">
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>-->
+            <div class="banner_text ion-text-center">
+                <h2 class="animate__animated animate__fadeInUp wow" data-wow-duration=".2s">Choisisser le capitaine et le vice-capitaine</h2>
+                <p class="animate__animated animate__fadeInUp wow" data-wow-duration=".25s">Le capitaine à une chance d'obtenir plus de betToken</p>
+            </div>
+        </div>
+
+        <div class="list_header">
+            <ion-row>
+                <ion-col class="ion-text-start d-flex" size="6">
+                    <div style="min-width:73px; height: 1px;">
+                    </div>
+                    <h3>{{'type' | translate}}</h3>
+                </ion-col>
+                <ion-col class="ion-text-center" size="2">
+                    <h3>{{'point' | translate}}</h3>
+                </ion-col>
+                <ion-col class="ion-text-center" size="2">
+                    <h3>Capitaine</h3>
+                </ion-col>
+                <ion-col class="ion-text-center" size="2">
+                    <h3>Vice Capitaine</h3>
+                </ion-col>
+            </ion-row>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-list lines="none">
+        <div class="list-inner">
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player4.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>R Jackson</h2>
+                                <h4><span style="color: #20B1F2;">WLS</span> | GK </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">125</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain1 ? 'active' : '' " (click)="chooseCaptain1()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain1 ? 'active' : '' " (click)="chooseViceCaptain1()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+        </div>
+
+        <div class="list-inner">
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player6.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>J Caven</h2>
+                                <h4><span style="color: #9C7DFD;">CBR</span> | DEF </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">320</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain2 ? 'active' : '' " (click)="chooseCaptain2()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain2 ? 'active' : '' " (click)="chooseViceCaptain2()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player1.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>P Williamson</h2>
+                                <h4><span style="color: #9C7DFD;">CBR</span> | DEF </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">185</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain3 ? 'active' : '' " (click)="chooseCaptain3()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain3 ? 'active' : '' " (click)="chooseViceCaptain3()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player2.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>B Cordero</h2>
+                                <h4><span style="color: #20B1F2;">WLS</span> | DEF </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">265</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain4 ? 'active' : '' " (click)="chooseCaptain4()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain4 ? 'active' : '' " (click)="chooseViceCaptain4()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+        </div>
+
+
+        <div class="list-inner">
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player7.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>J Donald</h2>
+                                <h4><span style="color: #9C7DFD;">CBR</span> | MID </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">269</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain5 ? 'active' : '' " (click)="chooseCaptain5()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain5 ? 'active' : '' " (click)="chooseViceCaptain5()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player8.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>R Simmons</h2>
+                                <h4><span style="color: #20B1F2;">WLS</span> | MID </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">302</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain6 ? 'active' : '' " (click)="chooseCaptain6()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain6 ? 'active' : '' " (click)="chooseViceCaptain6()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player5.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>K Simmons</h2>
+                                <h4><span style="color: #20B1F2;">WLS</span> | MID </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">210</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain7 ? 'active' : '' " (click)="chooseCaptain7()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain7 ? 'active' : '' " (click)="chooseViceCaptain7()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player9.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>L Opero</h2>
+                                <h4><span style="color: #9C7DFD;">CBR</span> | MID </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">345</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain8 ? 'active' : '' " (click)="chooseCaptain8()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain8 ? 'active' : '' " (click)="chooseViceCaptain8()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player10.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>W Ubon</h2>
+                                <h4><span style="color: #9C7DFD;">CBR</span> | MID </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">180</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain9 ? 'active' : '' " (click)="chooseCaptain9()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain9 ? 'active' : '' " (click)="chooseViceCaptain9()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player11.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>D Danie</h2>
+                                <h4><span style="color: #9C7DFD;">CBR</span> | MID </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">468</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain10 ? 'active' : '' " (click)="chooseCaptain10()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain10 ? 'active' : '' " (click)="chooseViceCaptain10()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <ion-row>
+                        <ion-col class="d-flex" size="6">
+                            <div class="img_box center_img">
+                                <img src="assets/images/players/player11.png" class="crop_img">
+                            </div>
+                            <div class="text_box">
+                                <h2>P Johns</h2>
+                                <h4><span style="color: #20B1F2;">WLS</span> | MID </h4>
+                            </div>
+                        </ion-col>
+
+                        <ion-col size="2">
+                            <h2 class="ion-text-center" style="font-weight: 400;">268</h2>
+                        </ion-col>
+
+                        <ion-col size="2" class="captain" [ngClass]="captain11 ? 'active' : '' " (click)="chooseCaptain11()">
+                            <h5 class="ion-text-center">
+                                <span>C</span>
+                                <span>2x</span>
+                            </h5>
+                        </ion-col>
+
+                        <ion-col size="2" class="vice-captain" [ngClass]="viceCaptain11 ? 'active' : '' " (click)="chooseViceCaptain11()">
+                            <h5 class="ion-text-center">
+                                <span>VC</span>
+                                <span>1.5x</span>
+                            </h5>
+                        </ion-col>
+                    </ion-row>
+                </div>
+            </ion-item>
+        </div>
+    </ion-list>
+</ion-content>
+
+<ion-footer class="ion-no-border">
+    <ion-button size="large" class="btn animate__animated animate__zoomIn wow" data-wow-duration=".5s" expand="round" (click)="tabs()">{{'save_team' | translate}}</ion-button>
+</ion-footer>

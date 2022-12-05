@@ -1,0 +1,3325 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <!--                <h3 class="ion-text-center">0h 9m left</h3>-->
+
+                <span class="end" (click)="dismiss()">
+                    <ion-icon class="zmdi zmdi-close ion-text-center"></ion-icon>
+                </span>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <div class="banner">
+        <div class="banner-inner d-flex">
+            <div class="img_box center_img">
+                <img src="assets/images/players/player6.png" class="crop_img">
+            </div>
+            <div class="text_box">
+                <h2>J Caven</h2>
+                <h3><span style="color: #9C7DFD;">CBR |</span> {{'defender' | translate}}</h3>
+                <ion-row >
+                    <ion-col size="3">
+                        <h3>{{'point' | translate}}</h3>
+                        <h2>265</h2>
+                    </ion-col>
+                    <ion-col size="3">
+                        <h3>{{'credit' | translate}}</h3>
+                        <h2>9.5</h2>
+                    </ion-col>
+
+                    <ion-col class="d-flex" size="6" (click)="dismiss()">
+                        <button class="btn--add end" (click)="openModal()">{{'add' | translate}}</button>
+                    </ion-col>
+                </ion-row>
+            </div>
+        </div>
+    </div>
+
+</ion-header>
+
+<ion-content>
+    <ion-list lines="none">
+        <h2 class="animate__animated animate__fadeInUp">{{'recent_match_status' | translate}}</h2>
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand1 ? 'active' : '' " (click)="faqExpandToggle1()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #E1A311 106%)"></div>
+                <div class="item-header">
+                    <h3>Jul 05, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #E1A311;">Mxt</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>20.50%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>325</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>10.0</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp"> 
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand2 ? 'active' : '' " (click)="faqExpandToggle2()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #FA0014 106%)"></div>
+                <div class="item-header">
+                    <h3>Jul 03, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #FA0014;">blb</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>29.70%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>149</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>10.0</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand3 ? 'active' : '' " (click)="faqExpandToggle3()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #34AEFF 106%)"></div>
+                <div class="item-header">
+                    <h3>May 29, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #34AEFF;">sks</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>39.50%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>336</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>10.0</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand4 ? 'active' : '' " (click)="faqExpandToggle4()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #5CFF00 106%)"></div>
+                <div class="item-header">
+                    <h3>May 26, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #5CFF00;">ppd</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>55.50%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>365</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>9.0</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand5 ? 'active' : '' " (click)="faqExpandToggle5()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #FDE200 106%)"></div>
+                <div class="item-header">
+                    <h3>May 23, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #FDE200;">Wls</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>77.79%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>450</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>9.5</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand6 ? 'active' : '' " (click)="faqExpandToggle6()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #D10E70 106%)"></div>
+                <div class="item-header">
+                    <h3>May 19, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #D10E70;">GGS</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>85.90%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>777</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>9.5</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        
+        
+        
+        
+        
+        
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand7 ? 'active' : '' " (click)="faqExpandToggle7()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #E1A311 106%)"></div>
+                <div class="item-header">
+                    <h3>Jul 05, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #E1A311;">Mxt</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>20.50%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>325</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>10.0</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand8 ? 'active' : '' " (click)="faqExpandToggle8()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #FA0014 106%)"></div>
+                <div class="item-header">
+                    <h3>Jul 03, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #FA0014;">blb</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>29.70%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>149</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>10.0</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand9 ? 'active' : '' " (click)="faqExpandToggle9()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #34AEFF 106%)"></div>
+                <div class="item-header">
+                    <h3>May 29, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #34AEFF;">sks</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>39.50%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>336</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>10.0</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand10 ? 'active' : '' " (click)="faqExpandToggle10()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #5CFF00 106%)"></div>
+                <div class="item-header">
+                    <h3>May 26, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #5CFF00;">ppd</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>55.50%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>365</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>9.0</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand11 ? 'active' : '' " (click)="faqExpandToggle11()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #FDE200 106%)"></div>
+                <div class="item-header">
+                    <h3>May 23, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #FDE200;">Wls</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>77.79%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>450</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>9.5</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+        
+        
+        <ion-item class="animate__animated animate__fadeInUp" [ngClass]="faqExpand12 ? 'active' : '' " (click)="faqExpandToggle12()">
+            <div class="item-inner">
+                <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 30%,  #D10E70 106%)"></div>
+                <div class="item-header">
+                    <h3>May 19, 2021</h3>
+                </div>
+                <div class="item-content">
+                    <ion-row>
+                        <ion-col size="5">
+                            <h3 style="color: var(--text-light);">{{'vs' | translate}}.</h3>
+                            <h2 class="ion-text-uppercase" style="color: #D10E70;">GGS</h2>
+                        </ion-col>
+                        <ion-col size="3">
+                            <h3>{{'sel_by' | translate}}</h3>
+                            <h2>85.90%</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'point' | translate}}</h3>
+                            <h2>777</h2>
+                        </ion-col>
+                        <ion-col size="2">
+                            <h3>{{'credit' | translate}}</h3>
+                            <h2>9.5</h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <div class="expanded-content">
+                    <div class="list_header">
+                        <ion-row>
+                            <ion-col size="6">
+                                <h3>{{'events' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-center" size="3">
+                                <h3>{{'actual' | translate}}</h3>
+                            </ion-col>
+
+                            <ion-col class="ion-text-end" size="3">
+                                <h3>{{'points' | translate}}</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                    <div class="list">
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>In playing 11</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.2</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Subsitute</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>20.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Assists</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>10.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Shots on Target</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>5.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Passes Completed</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>2</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Tackle Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Interceptions Won</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div> 
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Blocked shots</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>   
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Clearnce</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>1.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Goals Saved</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>2.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>        
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Red Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>     
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Yelow Card</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>1</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>-4.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>  
+                        
+                        <div class="item animate__animated animate__fadeInUp">
+                            <ion-row>
+                                <ion-col size="6">
+                                    <h2>Own Goal</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-center" size="3">
+                                    <h2>0</h2>
+                                </ion-col>
+
+                                <ion-col class="ion-text-end" size="3">
+                                    <h2>0.0</h2>
+                                </ion-col>
+                            </ion-row>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </ion-item>
+    </ion-list>
+</ion-content>

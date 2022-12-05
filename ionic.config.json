@@ -1,0 +1,8 @@
+{
+  "name": "fr.preprodparten.betgame",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,113 @@
+<ion-header>
+  <ion-toolbar>
+      <ion-buttons slot="start" mode="md">
+          <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+      </ion-buttons>
+      <ion-title></ion-title>
+  </ion-toolbar>
+
+  <div class="page-title">
+      <h2 class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">Inscription</h2>
+      <h3 class="animate__animated animate__fadeInUp wow" data-wow-duration=".8s">En moins d'une minute</h3>
+  </div>
+</ion-header>
+
+
+<ion-content class="bg_color" fullscreen style="width: 100vw; height:100vh;">
+
+  <div class="background center_img">
+      <img src="assets/images/bg.png" class="crop_img">
+  </div>
+
+  <div class="content-inner" style="width: 100%; height: 100%;"> >
+      <div class="form">
+          <ion-list class="animate__animated animate__fadeInUp" lines="none" style="margin-bottom: -3rem;">
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.2s">
+                  <div class="item_inner">
+                      <ion-label>PSN ID/GamerTag/FUTAccount</ion-label>
+                      <ion-input (change)="onChangeName($event)"  mode="md" type="name" placeholder="Entrer votre nom et prénom"></ion-input>
+                  </div>
+              </ion-item>
+
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.25s">
+                  <div class="item_inner">
+                      <ion-label>email</ion-label>
+                      <ion-input  (change)="onChangeEmail($event)" mode="md" type="email" placeholder="Entrer votre adresse email"></ion-input>
+                  </div>
+              </ion-item>
+
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.25s">
+                  <div class="item_inner">
+                      <ion-label>Adresse</ion-label>
+                      <ion-input mode="md" type="text"  (change)="onChangeAdresse($event)" placeholder="Entrer votre adresse"></ion-input>
+                  </div>
+              </ion-item>
+
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+                  <div class="item_inner">
+                      <ion-label>Numéro de téléphone</ion-label>
+                      <div class="input-box d-flex">
+                          <ion-input (change)="onChangePhone($event)"  mode="md"  type="number" placeholder="Entrer votre numéro de téléphone"></ion-input>
+                      </div>
+                  </div>
+              </ion-item>
+
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+                  <div class="item_inner">
+                      <ion-label>Mot de passe</ion-label>
+                      <div class="input-box d-flex">
+                          <ion-input (change)="onChangePassword($event)"  mode="md"  type="password" placeholder="Mot de passe"></ion-input>
+                      </div>
+                  </div>
+              </ion-item>
+
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+                  <div class="item_inner">
+                      <ion-label>Plateforme préférée</ion-label>
+                      <ion-select value="-1" (ionChange)="onChangeGame($event)">
+                          <ion-select-option value="Playstation">Playstation</ion-select-option>
+                          <ion-select-option value="Xbox">Xbox</ion-select-option>
+                          <ion-select-option value="PC">PC</ion-select-option>
+                      </ion-select>
+                  </div>
+              </ion-item> 
+
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+                  <div class="item_inner">
+                      <ion-label>Genre</ion-label>
+                      <ion-select (ionChange)="onChangeGenre($event)">
+                          <ion-select-option value="Femme">Femme</ion-select-option>
+                          <ion-select-option value="Homme">Homme</ion-select-option>
+                          <ion-select-option value="Autre">Autre</ion-select-option>
+                      </ion-select>
+                  </div>
+              </ion-item>
+
+              <!-- <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+                  <div class="item_inner">
+                      <ion-label>PSN/GamerTag/FUTAccout</ion-label>
+                      <div class="input-box d-flex">
+                          <ion-input mode="md" type="number" placeholder="Rentrer le pseudo de votre plateforme"></ion-input>
+                      </div>
+                  </div>
+              </ion-item>
+
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.35s">
+                  <div class="item_inner">
+                      <ion-label>Anniversaire</ion-label>
+                      <div class="input-box d-flex">
+                          <ion-datetime mode="ios" displayFormat="DD MMMM YYYY" placeholder="Séléctionner votre date de naissance"></ion-datetime>
+                         <ion-icon class="zmdi zmdi-calendar-alt end ion-text-end"></ion-icon>
+                      </div>
+                  </div>
+              </ion-item> -->
+          </ion-list>
+      </div>
+
+      <div class="content-footer">
+          <h2 class="ion-text-center animate__animated animate__fadeInUp wow" data-wow-duration="0.4s">Nous allons vous envoyer un code de vérification.</h2>
+          <ion-button size="large" class="btn animate__animated animate__slideInUp wow" data-wow-duration=".45s" expand="round" (click)="register()">Continuer</ion-button>
+      </div>
+  </div>
+
+</ion-content>

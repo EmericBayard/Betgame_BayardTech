@@ -1,0 +1,1 @@
+declare module '*.png' { const png: unknown; export default png; }

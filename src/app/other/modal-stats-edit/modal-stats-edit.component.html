@@ -1,0 +1,58 @@
+<div class="modal--editor">
+  <h1 class="modal--title">Modifier résultats : </h1>
+
+  <form>
+
+    <div class="modal--players">
+      <span>Joueur 1</span>
+      <span>Joueur 2</span>
+    </div>
+
+    <div class="row row--buts">
+      <input type="number" id="buts-p1" value="{{this.P1stats.home_user_id_score}}">
+      <label>Buts</label>
+      <input type="number" id="buts-p2" value="{{this.P2stats.away_user_id_score}}">
+    </div>
+
+    <div class="row row--tirs">
+      <input type="number" id="tirs-p1" value="{{this.P1stats.tirs}}">
+      <label>Tirs</label>
+      <input type="number" id="tirs-p2" value="{{this.P2stats.tirs}}">
+    </div>
+
+    <div class="row row--possession">
+      <input type="number" id="possession-p1" value="{{this.P1stats.possession}}">
+      <label>Possession %</label>
+      <input type="number" id="possession-p2" value="{{this.P2stats.possession}}">
+    </div>
+
+    <div class="row row--sa">
+      <input type="number" id="sa-p1" value="{{this.P1stats.precision_des_tirs}}">
+      <label>Précision des tirs</label>
+      <input type="number" id="sa-p2" value="{{this.P2stats.precision_des_tirs}}">
+    </div>
+
+    <div class="row row--pa">
+      <input type="number" id="pa-p1" value="{{this.P1stats.precision_des_passes}}">
+      <label>Précision des passes</label>
+      <input type="number" id="pa-p2" value="{{this.P2stats.precision_des_passes}}">
+    </div>
+
+    <div class="row row--penaltys">
+      <input type="number" id="penaltys-p1" value="{{this.P1stats.penaltys}}">
+      <label>Pénaltys</label>
+      <input type="number" id="penaltys-p2" value="{{this.P2stats.penaltys}}">
+    </div>
+
+    <div class="row row--offsides">
+      <input type="number" id="offsides-p1" value="{{this.P1stats.hors_jeu}}">
+      <label>Hors Jeux</label>
+      <input type="number" id="offsides-p2" value="{{this.P2stats.hors_jeu}}">
+    </div>
+
+  </form>
+  <div class="ctrl--btn">
+    <button class="modal--button" (click)="createObject()">Valider</button>
+    <button class="modal--button" (click)="dismiss()">Fermer</button>
+  </div>
+</div>

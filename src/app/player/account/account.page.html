@@ -1,0 +1,179 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title-inner d-flex">
+                Mon compte
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <div class="page-title d-flex" (click)="my_profile()">
+        <div class="img_box center_img">
+            <img src="assets/images/users/user1.png" class="crop_img">
+        </div>
+        <div class="text_box">
+            <h2 class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">{{this.username}}</h2>
+
+          <!--                        <div class="progress_bar">-->
+          <!--                            <div class="progress_bar_active" style="width: 80%">-->
+          <!--                            </div>-->
+          <!--                        </div>-->
+
+
+
+
+
+
+          <h2 class="animate__animated animate__fadeInUp wow " data-wow-duration="0.5s">
+            <!--                          Niveau 89-->
+            <span class="start animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">{{ this.userTokens }} token BetGame </span>
+          </h2>
+          <div class="icon_box" style="display: inline-flex">
+            <ion-icon class="zmdi zmdi-fire" style="color: #a434ef"></ion-icon>
+            <ion-icon class="zmdi zmdi-fire" style="color: #a434ef"></ion-icon>
+            <ion-icon class="zmdi zmdi-fire" style="color: #a434ef"></ion-icon>
+            <ion-icon class="zmdi zmdi-fire" style="color: #a434ef"></ion-icon>
+            <ion-icon class="zmdi zmdi-fire" style="color: #a434ef"></ion-icon>
+          </div>
+
+
+        </div>
+
+
+
+
+      <!--<div class="lavel animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+        <ion-item class="animate__animated animate__fadeInUp" (click)="my_points()">
+          <div class="item-inner d-flex">
+
+            <div class="text_box">
+
+            </div>
+          </div>
+        </ion-item>
+      </div>-->
+    </div>
+
+
+</ion-header>
+
+<ion-content>
+
+
+    <div class="content-inner">
+
+
+        <ion-list lines="none">
+          <ion-item class="animate__animated animate__fadeInUp" (click)="my_profile()">
+            <div class="item-inner d-flex">
+              <div class="icon_box">
+                <ion-icon class="zmdi zmdi-face" style="color: #153666"></ion-icon>
+              </div>
+              <div class="text_box">
+                <h2>Mon profil</h2>
+                <h3>Découvrez votre profil Betgame</h3>
+              </div>
+            </div>
+          </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp" (click)="leaderboard()">
+                <div class="item-inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-globe-alt" style="color: #a434ef"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2>Classement</h2>
+                        <h3>Jouer des matchs afin de devenir le meilleur joueur de Betgame</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <!--<ion-item class="animate__animated animate__fadeInUp" (click)="my_team()">
+                <div class="item-inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-assignment-account" style="color: #347FEF"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2>Mes Teams</h2>
+                        <h3>Consulter mes Teams</h3>
+                    </div>
+                </div>
+            </ion-item>-->
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="about_us()">
+                <div class="item-inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-assignment-alert" style="color: #153666"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2>BetGame</h2>
+                        <h3>Découvre le projet BetGame</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="support()">
+                <div class="item-inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-email" style="color: #a434ef"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2>{{'Support' | translate}}</h2>
+                        <h3>Contacter nous en cas de problème</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="privacy_policy()">
+                <div class="item-inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-assignment" style="color: #153666"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2>Règle de Betgame</h2>
+                        <h3>Voici les différentes règles de Betgame à respecter</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <!--<ion-item class="animate__animated animate__fadeInUp" (click)="language()">
+                <div class="item-inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-globe" style="color: #347FEF"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2>{{'change_languade' | translate}}</h2>
+                        <h3>{{'set_your_prefeerred_language' | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>-->
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="faqs()">
+                <div class="item-inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-pin-help" style="color: #a434ef"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2>{{'faqs' | translate}}</h2>
+                        <h3>{{'get_your_question_answered' | translate}}</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp" (click)="stats()">
+                <div class="item-inner d-flex">
+                    <div class="icon_box">
+                        <ion-icon class="zmdi zmdi-assignment-o" style="color: #153666"></ion-icon>
+                    </div>
+                    <div class="text_box">
+                        <h2>Stats</h2>
+                        <h3>Consulter vos statistiques suite à vos différents match jouer sur l'application Betgame</h3>
+                    </div>
+                </div>
+            </ion-item>
+
+
+        </ion-list>
+    </div>
+
+</ion-content>
+<!--<custom-tabs style="bottom: 0" ></custom-tabs>-->

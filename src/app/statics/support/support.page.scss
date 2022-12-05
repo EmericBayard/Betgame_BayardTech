@@ -1,0 +1,116 @@
+ion-content {
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+    --background: var(--transparent) !important;
+}
+
+
+.background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    min-height: 100vh;
+
+    img {
+        top: -29px;
+        min-height: calc(100vh + 29px);
+    }
+}
+
+.content-inner {
+    position: relative;
+    min-height: calc(100vh - 172.2px);
+    max-height: calc(100vh - 172.2px);
+    overflow: hidden;
+    z-index: 11;
+    backdrop-filter: blur(8px);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        background: var(--secondary);
+        opacity: 0.8;
+    }
+
+    .contacts {
+        position: relative;
+        z-index: 99;
+        padding: 10px 25px;
+        display: flex;
+        align-items: center;
+
+        ion-row {
+            width: 100%;
+            margin: 0 -5px;
+            position: relative;
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                width: 1px;
+                height: 36px;
+                margin: auto;
+                background: var(--white);
+                opacity: .4;
+
+            }
+
+            ion-col {
+                min-height: 60px;
+                padding: 0 5px;
+
+                h2 {
+                    margin: 0 auto;
+                    color: var(--white);
+                    width: fit-content;
+                    font-size: .95rem;
+                    font-weight: 400;
+
+                    ion-icon {
+                        font-size: 1.45rem;
+                        min-width: 37px;
+                    }
+                }
+            }
+        }
+    }
+
+    .form {
+        border-radius: 25px 25px 0 0;
+        overflow: hidden;
+        max-height: calc(100vh - 252px);
+        min-height: calc(100vh - 252px);
+        background: var(--bg-color);
+        padding-top: 25px;
+
+        .page-title {
+            padding: 0;
+        }
+
+        ion-list {
+            min-height: calc(100vh - 450px);
+            max-height: calc(100vh - 450px);
+            overflow: hidden;
+            overflow-y: auto;
+
+
+            ion-item ion-textarea {
+                max-height: 175px;
+                overflow: hidden;
+                overflow-y: auto;
+                margin: 0;
+            }
+        }
+    }
+}

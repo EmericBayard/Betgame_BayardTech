@@ -1,0 +1,38 @@
+#modal--id {
+    height: 100vh;
+    width: 100vw;
+    background-color: var(--bg-color);
+}
+
+.modal--title {
+    background-color: var(--primary);
+    margin: 0;
+    padding: 40px;
+    border-radius: 0 0 20px 20px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.modal--list {
+    list-style-type: none;
+    padding: 20px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.modal--list > * {
+    margin-bottom: 20px;
+}
+
+.modal--button__close {
+    background: rgb(32, 29, 41);
+    color: var(--white);
+    border-radius: 10px;
+    width: 33%;
+    height: 4em;
+    display: block;
+    margin: 2rem auto;
+}

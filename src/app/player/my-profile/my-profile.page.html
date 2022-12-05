@@ -1,0 +1,137 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+    <div class="page-title d-flex">
+        <div class="text_box">
+            <h2 class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">{{'my_profile' | translate}}</h2>
+            <h3 class="animate__animated animate__fadeInUp wow" data-wow-duration=".55s">{{'everything_about_you' | translate}}</h3>
+        </div>
+        <div class="img_container d-flex">
+            <ion-icon class="zmdi zmdi-camera"></ion-icon>
+            <div class="img_box center_img end">
+                <img src="assets/images/users/user1.png" class="crop_img">
+            </div>
+        </div>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="content-inner">
+        <div class="form">
+            <ion-list class="animate__animated animate__fadeInUp" lines="none">
+                <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <ion-label style="border-bottom: 1px solid purple;
+                        width : 700px;">Pseudo</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_full_name' | translate}}" readonly value="{{ this.pseudo }}"></ion-input>
+                    </div>
+                </ion-item>
+
+                <!-- ADDED ITEMS -->
+
+                <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <ion-label style="border-bottom: 1px solid purple;
+                        width : 700px;">ID de compte</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_id' | translate}}" readonly value="{{ this.account_id }}"></ion-input>
+                    </div>
+                </ion-item>
+
+                <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <ion-label style="border-bottom: 1px solid purple;
+                        width : 700px;">ID d'équipe</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_team_id' | translate}}" readonly value="{{ this.team_id }}"></ion-input>
+                    </div>
+                </ion-item>
+
+                <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <ion-label style="border-bottom: 1px solid purple;
+                        width : 700px;">Votre plateforme</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_platform' | translate}}" readonly value="{{ this.user_platform }}"></ion-input>
+                    </div>
+                </ion-item>
+
+                <!--  -->
+
+                <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <ion-label style="border-bottom: 1px solid purple;
+                        width : 700px;">Jeux favoris</ion-label>
+                        <ion-input mode="md" type="name" placeholder="{{'enter_full_name' | translate}}" readonly value="{{ this.jeux_favoris }}"></ion-input>
+                    </div>
+                </ion-item>
+
+                <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <ion-label style="border-bottom: 1px solid purple;
+                        width : 700px;">{{'email_address' | translate}}</ion-label>
+                        <ion-input mode="md" type="email" placeholder="{{'enter_email_address' | translate}}" readonly  value="{{ this.email }}"></ion-input>
+                    </div>
+                </ion-item>
+
+                <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <ion-label style="border-bottom: 1px solid purple;
+                        width : 700px;">{{'phone_number' | translate}}</ion-label>
+                        <div class="input-box d-flex">
+                            <ion-input mode="md" type="text" placeholder="{{'enter_phone_number' | translate}}" readonly value="{{ this.phone }}"></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+
+                <!--
+                <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <ion-label>{{'birthdate' | translate}}</ion-label>
+                        <div class="input-box d-flex">
+                            <ion-datetime mode="ios" displayFormat="DD MMMM YYYY" placeholder="{{'select_birthdate' | translate}}"></ion-datetime>
+                           <ion-icon class="zmdi zmdi-calendar-alt end ion-text-end"></ion-icon>
+                        </div>
+                    </div>
+                </ion-item>   
+-->
+
+                <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <ion-label style="border-bottom: 1px solid purple;
+                        width : 700px;">{{'birthdate' | translate}}</ion-label>
+                        <div class="input-box d-flex">
+                            <ion-input mode="md" type="text" placeholder="{{'select_birthdate' | translate}}" readonly value="{{ this.date_birth_date }}"></ion-input>
+                        </div>
+                    </div>
+                </ion-item>  
+                <ion-item lines="none" class="animate__animated animate__fadeInUp">
+                    <div class="item_inner">
+                        <ion-label style="border-bottom: 1px solid purple;
+                        width : 700px;">{{'Votre PSN ' | translate}}</ion-label>
+                        <div class="scrolling-wrapper">
+                            <div class="card"><i class="zmdi zmdi-steam-square"></i></div>
+                            <div class="card"><i class="zmdi zmdi-playstation"></i></div>
+                            <div class="card"><i class="zmdi zmdi-xbox"></i></div>
+                            <div class="card"><i class="zmdi zmdi-twitch"></i></div>
+                            <div class="card"><i class="zmdi zmdi-youtube"></i></div>
+                        </div>
+                    </div>
+                </ion-item>
+                    <!--
+                <ion-card class="welcome-card " style="background-color: #690054;">
+                    <ion-card-content>
+                      <ion-label style="color: white;">{{'Nombre de but par match !' | translate}}</ion-label>
+                      <canvas #barChart></canvas>
+                    </ion-card-content>
+                  </ion-card> -->
+                <ion-item lines="none" class="animate__animated animate__fadeInUp" (click)="logout()">
+                    <div class="item_inner">
+                      <h2>{{'logout' | translate}}</h2>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </div>
+    </div> 
+</ion-content>

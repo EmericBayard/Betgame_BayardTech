@@ -1,0 +1,133 @@
+<ion-header>
+  <ion-toolbar>
+
+
+      <h2> <span class="end" (click)="backClicked()">Retour</span></h2>
+  </ion-toolbar>
+  <h2 class="animate__animated animate__fadeInUp">Les Matchs à venir s'afficheront ici : </h2>
+  <h2 class="animate__animated animate__fadeInUp">{{this.msg}}</h2>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+  <ion-list lines="none" *ngFor="let t of match">
+      <div class="banner animate__animated animate__fadeInUp wow" data-wow-duration=".3s">
+          <ion-slides pager="true" loop="true">
+
+          </ion-slides>
+      </div>
+      <ion-item class="animate__animated animate__fadeInUp" (click)="liveMatchInfo()">
+          <div class="item-inner">
+              <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                  <h6></h6>
+              </div>
+              <ion-row style="background:url(assets/images/versus.png);background-size: cover;">
+                  <ion-col class="team_1" size="6">
+                      <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                      <div class="team-detail">
+                          <!--<h3 class="ion-text-start">Wolves United</h3>-->
+                          <div class="team-logo" style="
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: space-evenly;
+                          align-items: center;">
+                              <img src="assets/images/users/user1.png" class="crop_img" style="border-radius:50%;" (click)="openModalId(tournament, home)">
+                              <h4 style="margin-top:1em;">{{t.home_user_id}}</h4>
+                              <h2 style="margin-top:1em;">{{t.home_user_id_score}}</h2>
+                          </div>
+                      </div>
+                  </ion-col>
+
+                  <!--<div class="timeing">
+                      <h6>VS</h6>
+                  </div>-->
+
+                  <ion-col class="d-flex team_2" size="6" style="">
+                      <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                      <div class="team-detail" style="width:100%;">
+                          <!--<h3 class="ion-text-end">Cobra Guardians</h3>-->
+                          <!--<div class="team-logo d-flex">
+                              <h4>CBR</h4>&nbsp;&nbsp;
+                              <img src="assets/images/team_logo/team_7.png">
+                          </div>-->
+                          <div class="team-logo" style="
+                          display: flex;
+                          flex-direction: column;
+                          justify-content: space-evenly;
+                          align-items: center;">
+                              <img src="assets/images/users/user1.png" class="crop_img" style="border-radius:50%;" (click)="openModalId(tournament, away)">
+                              <h4 style="margin-top:1em;">{{t.away_user_id}}</h4>
+                              <h2 style="margin-top:1em;">{{t.away_user_id_score}}</h2>
+                          </div>
+                      </div>
+                  </ion-col>
+              </ion-row>
+              <div class="slide-footer d-flex" style="">
+                  <h5><strong>{{this.nr_tokens}} Tokens</strong> </h5>
+                  <h5 class="end">{{t.created_at}}<ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                  </h5>
+              </div>
+          </div>
+      </ion-item>
+  </ion-list>
+  <h2 class="animate__animated animate__fadeInUp" style="color:white;">Mon Match</h2>
+  <ion-list lines="none" *ngFor="let t of myMatch">
+    <ion-item class="animate__animated animate__fadeInUp">
+        <div class="item-inner">
+            <div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                <h6>{{t.id}}</h6>
+            </div>
+            <ion-row style="background:url(assets/images/versus.png);background-size: cover;">
+                <ion-col class="team_1" size="6" style="">
+                    <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                    <div class="team-detail">
+                        <!--<h3 class="ion-text-start">Wolves United</h3>-->
+                        <div class="team-logo" style="
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;">
+                            <img src="assets/images/users/user1.png" class="crop_img" style="border-radius:50%;" (click)="openModalId()">
+                            <h4 style="margin-top:1em;">{{t.home_user_id}}</h4>
+                            <h2 style="margin-top:1em;">{{t.home_user_id_score}}</h2>
+                        </div>
+                    </div>
+                </ion-col>
+
+                <!--<div class="timeing">
+                    <h6>VS</h6>
+                </div>-->
+
+                <ion-col class="d-flex team_2" size="6" style="">
+                    <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                    <div class="team-detail" style="width:100%;">
+                        <!--<h3 class="ion-text-end">Cobra Guardians</h3>-->
+                        <!--<div class="team-logo d-flex">
+                            <h4>CBR</h4>&nbsp;&nbsp;
+                            <img src="assets/images/team_logo/team_7.png">
+                        </div>-->
+                        <div class="team-logo" style="
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-evenly;
+                        align-items: center;">
+                            <img src="assets/images/users/user1.png" class="crop_img" style="border-radius:50%;" (click)="openModalId()">
+                            <h4 style="margin-top:1em;">{{t.away_user_id}}</h4>
+                            <h2 style="margin-top:1em;">{{t.away_user_id_score}}</h2>
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+            <div class="slide-footer d-flex" style="">
+                <h5><strong>{{this.nr_tokens}} Tokens</strong> </h5>
+                <h5 class="end">1 Décembre 2022 - 16h00<ion-icon class="zmdi zmdi-notifications-add ion-text-end"></ion-icon>
+                </h5>
+            </div>
+        </div>
+    </ion-item>
+  </ion-list>
+  <div style="width:90%;margin-left:auto;margin-right:auto;margin-bottom:10%;">
+    <ion-button size="small" class="btn animate__animated animate__zoomIn wow" data-wow-duration=".5s"  expand="round" (click)="addNewToGallery()">Envoie</ion-button>
+</div>
+<h2 class="animate__animated animate__fadeInUp" style="color:white;">Gagnant</h2>
+
+</ion-content>

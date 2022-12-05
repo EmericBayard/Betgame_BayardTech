@@ -1,0 +1,62 @@
+.banner {
+    position: relative;
+    min-height: 255px;
+}
+
+.logo {
+    padding: 0 20px;
+    width: 168px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: fit-content;
+    z-index: 999;
+    bottom: 40px;
+    margin: auto;
+
+    img {
+        display: block;
+        margin: auto;
+    }
+}
+
+
+ion-content {
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+    --background: var(--transparent) !important;
+}
+
+.content-inner {
+    position: relative;
+    min-height: calc(100vh - 325px) !important;
+    max-height: calc(100vh - 325px) !important;
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 11;
+    background: var(--secondary);
+    padding-top: 32px;
+
+    .text_box {
+        padding: 0px 22px 0px 22px;
+
+        h2 {
+            margin: 0;
+            color: var(--white);
+            font-size: 1rem;
+            padding-bottom: 20px;
+        }
+
+        p {
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 300;
+            line-height: 25px;
+            margin: 0;
+            padding-bottom: 20px;
+
+        }
+    }
+
+}

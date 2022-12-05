@@ -1,0 +1,308 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <div class="title-inner d-flex animate__animated animate__fadeInUp wow" data-wow-duration=".15s">
+                <ion-select value="Mes tournois">
+                    <ion-select-option>Mes tournois</ion-select-option>
+                    <ion-select-option>1 vs 1</ion-select-option>
+                  </ion-select>
+                <h3 class="end">
+                  <!--  <img src="assets/images/icons/ic_homeact.png">-->
+                  <ion-select value="FIFA 22">
+                    <ion-select-option>FIFA 22</ion-select-option>
+                    <ion-select-option>FIFA 23</ion-select-option>
+                  </ion-select>
+                </h3>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+    <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+        <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".2s" value="0">
+            <ion-label class="ion-text-center">
+                À venir
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".25s" value="1">
+            <ion-label class="ion-text-center">
+                En cours
+            </ion-label>
+        </ion-segment-button>
+        <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".3s" value="2">
+            <ion-label class="ion-text-center">
+                terminés
+            </ion-label>
+        </ion-segment-button>
+      <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".3s" value="3">
+        <ion-label class="ion-text-center">
+          1 VS 1
+        </ion-label>
+      </ion-segment-button>
+    </ion-segment>
+</ion-header>
+
+<ion-content class="bg_color">
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp" *ngFor="let t of getTournaments(0)">
+                    <ion-item class="animate__animated animate__fadeInUp" [routerLink]="['/upcoming-match-info']" [state]="{turnament: t}">
+
+
+                        <div class="item-inner">
+                            <!--<div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                                <h6>Premier {{'league' | translate}}</h6>
+                            </div>-->
+                            <ion-row style="">
+                                <div class="turnament-card" style="display:flex;flex-direction:column;align-items:center;">
+                                    <div class="turnament-title " data-wow-duration="0.5s">
+                                        <h6 style="font-size:1.2rem;font-weight:400;">{{t.Title}}</h6>
+                                    </div>
+                                    <div class="turnament-date" style="">
+                                        <h4 style="font-size:0.9rem;font-weight:400;">{{t.start_date |  date}} - {{t.end_date |  date}}</h4>
+                                    </div>
+                                    <div class="turnament-infos">
+                                        <div class="Logo">
+                                            <img src="../../assets/icon/turnamentLogo.png">
+                                            <!--  img src ="{{t.image}}"-->
+                                        </div>
+                                        <div class="turnament-subinfos">
+                                            <div class="nb-player" style="">
+                                                <h3 style="font-size:0.9rem;font-weight:400;line-height: inherit;
+                                                vertical-align: bottom;">
+                                                    <ion-icon class="zmdi zmdi-account" style="line-height: 20px;">
+                                                    </ion-icon>Nombre d'équipe : {{t.slots}}
+                                                </h3>
+                                            </div>
+                                            <div class="nb-player" style="">
+                                                <h3 style="font-size:0.9rem;font-weight:400;line-height: inherit;
+                                                vertical-align: bottom;">
+                                                    <ion-icon class="zmdi zmdi-account-o" style="line-height: 20px;">
+                                                    </ion-icon>Places restantes : 0
+                                                </h3>
+                                            </div>
+                                            <div class="cashprice">
+                                                <h3 style="font-size:0.9rem;font-weight:400;"><img class="betgame-logo"
+                                                        src="../../assets/icon/logo1.png"> {{t.nr_tokens}} tokens</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </ion-row>
+                            <!--<div class="item-footer d-flex">
+                                <button style="margin-left: auto; margin-right: auto;color: #180413;">
+                                    <img class="betgame-logo"
+                                                        src="../../assets/icon/logo1.png"> {{t.nr_tokens_to_join}}
+                                </button>
+                            </div>-->
+                        </div>
+                    </ion-item>
+                </ion-item>
+
+
+
+
+            </ion-list>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp">
+
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" *ngFor="let t of getTournaments(1)">
+                    <ion-item class="animate__animated animate__fadeInUp" [routerLink]="['/upcoming-match-info']" [state]="{turnament: t}">
+                        <div class="item-inner">
+                            <!--<div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                                <h6>Premier {{'league' | translate}}</h6>
+                            </div>-->
+                            <ion-row style="">
+                                <div class="turnament-card" style="display:flex;flex-direction:column;align-items:center;">
+                                    <div class="turnament-title " data-wow-duration="0.5s">
+                                        <h6 style="font-size:1.2rem;font-weight:400;">{{t.Title}}</h6>
+                                    </div>
+                                    <div class="turnament-date" style="">
+                                        <h4 style="font-size:0.9rem;font-weight:400;">{{t.start_date |  date}} - {{t.end_date |  date}}</h4>
+                                    </div>
+                                    <div class="turnament-infos">
+                                        <div class="Logo">
+                                            <img src="../../assets/icon/turnamentLogo.png">
+                                            <!--  img src ="{{t.image}}"-->
+                                        </div>
+                                        <div class="turnament-subinfos">
+                                            <div class="nb-player" style="">
+                                                <h3 style="font-size:0.9rem;font-weight:400;line-height: inherit;
+                                                vertical-align: bottom;">
+                                                    <ion-icon class="zmdi zmdi-account" style="line-height: 20px;">
+                                                    </ion-icon>Nombre d'équipe : {{t.slots}}
+                                                </h3>
+                                            </div>
+                                            <div class="nb-player" style="">
+                                                <h3 style="font-size:0.9rem;font-weight:400;line-height: inherit;
+                                                vertical-align: bottom;">
+                                                    <ion-icon class="zmdi zmdi-account-o" style="line-height: 20px;">
+                                                    </ion-icon>Places restantes : 0
+                                                </h3>
+                                            </div>
+                                            <div class="cashprice">
+                                                <h3 style="font-size:0.9rem;font-weight:400;"><img class="betgame-logo"
+                                                        src="../../assets/icon/logo1.png"> {{t.nr_tokens}} tokens</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </ion-row>
+                            <!--<div class="item-footer d-flex">
+                                <button style="margin-left: auto; margin-right: auto;color: #180413;">
+                                    <img class="betgame-logo"
+                                                        src="../../assets/icon/logo1.png"> {{t.nr_tokens_to_join}}
+                                </button>
+                            </div>-->
+                        </div>
+                    </ion-item>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+        <ion-slide>
+            <ion-list lines="none">
+                <ion-item class="animate__animated animate__fadeInUp">
+
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp" *ngFor="let t of getTournaments(2)">
+                    <ion-item class="animate__animated animate__fadeInUp" [routerLink]="['/upcoming-match-info']" [state]="{turnament: t}">
+                        <div class="item-inner">
+                            <!--<div class="league animate__animated animate__fadeInDown wow" data-wow-duration="0.5s">
+                                <h6>Premier {{'league' | translate}}</h6>
+                            </div>-->
+                            <ion-row style="">
+                                <div class="turnament-card" style="display:flex;flex-direction:column;align-items:center;">
+                                    <div class="turnament-title " data-wow-duration="0.5s">
+                                        <h6 style="font-size:1.2rem;font-weight:400;">{{t.Title}}</h6>
+                                    </div>
+                                    <div class="turnament-date" style="">
+                                        <h4 style="font-size:0.9rem;font-weight:400;">{{t.start_date |  date}} - {{t.end_date |  date}}</h4>
+                                    </div>
+                                    <div class="turnament-infos">
+                                        <div class="Logo">
+                                            <img src="../../assets/icon/turnamentLogo.png">
+                                            <!--  img src ="{{t.image}}"-->
+                                        </div>
+                                        <div class="turnament-subinfos">
+                                            <div class="nb-player" style="">
+                                                <h3 style="font-size:0.9rem;font-weight:400;line-height: inherit;
+                                                vertical-align: bottom;">
+                                                    <ion-icon class="zmdi zmdi-account" style="line-height: 20px;">
+                                                    </ion-icon>Nombre d'équipe : {{t.slots}}
+                                                </h3>
+                                            </div>
+                                            <div class="nb-player" style="">
+                                                <h3 style="font-size:0.9rem;font-weight:400;line-height: inherit;
+                                                vertical-align: bottom;">
+                                                    <ion-icon class="zmdi zmdi-account-o" style="line-height: 20px;">
+                                                    </ion-icon>Places restantes : 0
+                                                </h3>
+                                            </div>
+                                            <div class="cashprice">
+                                                <h3 style="font-size:0.9rem;font-weight:400;"><img class="betgame-logo"
+                                                        src="../../assets/icon/logo1.png"> {{t.nr_tokens}} tokens</h3>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </ion-row>
+                            <!--<div class="item-footer d-flex">
+                                <button style="margin-left: auto; margin-right: auto;color: #180413;">
+                                    <img class="betgame-logo"
+                                                        src="../../assets/icon/logo1.png"> {{t.nr_tokens_to_join}}
+                                </button>
+                            </div>-->
+                        </div>
+                    </ion-item>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+      <ion-slide>
+        <ion-list lines="none">
+         <!-- <div class="page-title">
+            <h1 class="animate__animated animate__fadeInUp wow " style="color: white;margin-bottom: 15px" data-wow-duration="0.5s">1 VS 1</h1>
+          </div>-->
+
+          <div class="form" >
+            <ion-list class="animate__animated animate__fadeInUp">
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.2s">
+                <div class="item_inner">
+                  <ion-label>Token à miser</ion-label>
+                  <ion-input type="number"></ion-input>
+                </div>
+              </ion-item>
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.2s">
+                <div class="item_inner">
+                  <ion-label>Nombre match</ion-label>
+                  <ion-select value="BO 1">
+                    <ion-select-option>BO 1</ion-select-option>
+                    <ion-select-option>BO 3</ion-select-option>
+                    <ion-select-option>BO 5</ion-select-option>
+
+                  </ion-select>
+                </div>
+              </ion-item>
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+                <div class="item_inner">
+                  <ion-label>Jeux sélectionné</ion-label>
+                  <ion-select value="Fifa 2023">
+                    <ion-select-option>Fifa 2022</ion-select-option>
+                    <ion-select-option>Fifa 2023</ion-select-option>
+                  </ion-select>
+                </div>
+              </ion-item>
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+                <div class="item_inner">
+                  <ion-label>Mode de jeux</ion-label>
+                  <ion-select value="FUT (FIFA ULTIMATE TEAM - AMICAL GAME)">
+                    <ion-select-option>FUT</ion-select-option>
+                    <ion-select-option>Saison</ion-select-option>
+                    <ion-select-option>Club Pro</ion-select-option>
+                  </ion-select>
+                </div>
+              </ion-item>
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.2s">
+                <div class="item_inner">
+                  <ion-label>Pseudo de ton adversaire</ion-label>
+                  <ion-input style="padding: 10px;" mode="md" type="name"></ion-input>
+                </div>
+              </ion-item>
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.35s">
+                <div class="item_inner">
+                  <ion-label>Heure du match</ion-label>
+                  <div style="padding: 10px;background-color: #393747;" class="input-box d-flex">
+                    <ion-datetime mode="ios" displayFormat="DD MMMM YYYY"
+                                  placeholder="Heure du match"></ion-datetime>
+                    <ion-icon class="zmdi zmdi-calendar-alt end ion-text-end"></ion-icon>
+                  </div>
+                </div>
+              </ion-item>
+              <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.35s">
+                <div class="item_inner">
+                  <ion-button style="background-color: #1f0644" size="large"
+                              class="btn animate__animated animate__slideInUp wow" data-wow-duration=".45s"
+                  >Envoyer l'invitation
+                  </ion-button>
+                </div>
+              </ion-item>
+
+            </ion-list>
+          </div>
+
+        </ion-list>
+
+
+      </ion-slide>
+
+
+    </ion-slides>
+</ion-content>

@@ -1,0 +1,68 @@
+<div style="width:100vw; height:100vh; ">
+    <ion-content class="bg_color" style="width:auto; height:70%;">
+        <div class="logo ion-text-center">
+            <img src="assets/icon/icon.png" class="animate__animated animate__zoomIn wow logo_img"
+                data-wow-duration="0.3s">
+        </div>
+    </ion-content>
+
+    <ion-footer class="ion-no-border" style="width:100%; height:70%;">
+        <div class="form">
+            <h2 class="ion-text-center animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">{{'let_s_play'
+                | translate}}</h2>
+            <ion-list class="animate__animated animate__fadeInUp" lines="none">
+                <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">
+                    <div class="item_inner">
+                        <!-- <ion-label>{{'phone_number' | translate}}</ion-label> -->
+                        <ion-label>PSN ID/Email</ion-label>
+                        <div class="input-box d-flex">
+                            <!-- <h3 (click)="country_code()">+1 &nbsp;</h3> -->
+                            <!-- <ion-input mode="md" type="number" placeholder="{{'enter_phone_number' | translate}}"></ion-input> -->
+                            <ion-input mode="md" type="string" placeholder="Entrer votre identifiant PSN ou Email"
+                                [(ngModel)]="login"></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+                <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">
+                    <div class="item_inner">
+                        <!-- <ion-label>{{'phone_number' | translate}}</ion-label> -->
+                        <ion-label>mot de passe</ion-label>
+                        <div class="input-box d-flex">
+                            <!-- <h3 (click)="country_code()">+1 &nbsp;</h3> -->
+                            <!-- <ion-input mode="md" type="number" placeholder="{{'enter_phone_number' | translate}}"></ion-input> -->
+                            <ion-input mode="md" type="password" placeholder="Entrer votre mot de passe"
+                                [(ngModel)]="password"></ion-input>
+                        </div>
+                    </div>
+                </ion-item>
+            </ion-list>
+
+            <!-- <ion-button size="large" class="btn animate__animated animate__slideInUp wow" data-wow-duration=".5s" expand="round" (click)="register()">{{'continue' | translate}}</ion-button> -->
+            <ion-button size="large" class="btn animate__animated animate__slideInUp wow" data-wow-duration=".5s"
+                expand="round" (click)="signin()">Connexion</ion-button>
+            <ion-button size="large" class="btn animate__animated animate__slideInUp wow register"
+                data-wow-duration=".5s" expand="round" (click)="register()">Inscription</ion-button>
+        </div>
+
+        <div class="social_login">
+            <h3 class="ion-text-center animate__animated animate__fadeInUp wow" data-wow-duration=".8s">Mot de passe
+                oublié ?</h3>
+            <!--<div class="button_container d-flex animate__animated animate__fadeInUp wow" data-wow-duration=".8s">
+                <ion-row>
+                    <ion-col size="6">
+                        <ion-button size="large" expand="full" class="btn" (click)="verification()">
+                            <ion-icon class="zmdi zmdi-facebook ion-text-start"></ion-icon>&nbsp;
+                            {{'facebook' | translate}}
+                        </ion-button>
+                    </ion-col>
+                    <ion-col size="6">
+                        <ion-button size="large" expand="full" class="btn" (click)="verification()">
+                            <ion-icon class="zmdi zmdi-google ion-text-start"></ion-icon>&nbsp;&nbsp;
+                            {{'google' | translate}}
+                        </ion-button>
+                    </ion-col>
+                </ion-row>
+            </div>-->
+        </div>
+    </ion-footer>
+</div>

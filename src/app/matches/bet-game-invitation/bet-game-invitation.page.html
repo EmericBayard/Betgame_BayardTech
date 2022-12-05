@@ -1,0 +1,81 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" mode="md">
+      <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+    </ion-buttons>
+    <ion-title></ion-title>
+  </ion-toolbar>
+
+ <!-- <div class="page-title">
+    <h2 class="animate__animated animate__fadeInUp wow " style="text-align:center" data-wow-duration="0.5s">INVITATION 1 VS 1</h2>
+  </div>-->
+</ion-header>
+<ion-content fullscreen style="width: 100vw; height:100vh;background-color: #262434!important;">
+
+  <div class="content-inner" style="background-color: #0e050c!important;width: 100%; height: 100%; ">
+
+    <div class="form" >
+      <ion-list class="animate__animated animate__fadeInUp">
+        <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.2s">
+          <div class="item_inner">
+            <ion-label>Number of Token</ion-label>
+            <ion-input type="number"></ion-input>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.2s">
+          <div class="item_inner">
+            <ion-label>Number of Matches</ion-label>
+            <ion-input mode="md" type="number"></ion-input>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+          <div class="item_inner">
+            <ion-label>Type of game</ion-label>
+            <ion-select value="Fifa 22">
+
+              <ion-select-option>Fifa 22</ion-select-option>
+              <ion-select-option>Fifa 23</ion-select-option>
+            </ion-select>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.3s">
+          <div class="item_inner">
+            <ion-label>Mode de jeux</ion-label>
+            <ion-select value="FUT (FIFA ULTIMATE TEAM - AMICAL GAME)">
+              <ion-select-option>FUT (FIFA ULTIMATE TEAM - AMICAL GAME)</ion-select-option>
+              <ion-select-option>FUT (FIFA ULTIMATE TEAM - AMICAL GAME) 2</ion-select-option>
+              <ion-select-option>FUT (FIFA ULTIMATE TEAM - AMICAL GAME) 3</ion-select-option>
+            </ion-select>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.2s">
+          <div class="item_inner">
+            <ion-label>Email to</ion-label>
+            <ion-input style="padding: 10px;" mode="md" type="name"></ion-input>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.35s">
+          <div class="item_inner">
+            <ion-label>Check in</ion-label>
+            <div style="padding: 10px;background-color: #393747;" class="input-box d-flex">
+              <ion-datetime mode="ios" displayFormat="DD MMMM YYYY"
+                            placeholder="Check in"></ion-datetime>
+              <ion-icon class="zmdi zmdi-calendar-alt end ion-text-end"></ion-icon>
+            </div>
+          </div>
+        </ion-item>
+        <ion-item lines="none" class="animate__animated animate__fadeInUp wow" data-wow-duration="0.35s">
+          <div class="item_inner">
+            <ion-button style="background-color: #1f0644" size="large"
+                        class="btn animate__animated animate__slideInUp wow" data-wow-duration=".45s"
+            >Send Invitation
+            </ion-button>
+          </div>
+        </ion-item>
+
+      </ion-list>
+    </div>
+
+  </div>
+
+</ion-content>

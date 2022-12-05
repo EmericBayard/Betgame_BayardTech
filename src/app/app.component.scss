@@ -1,0 +1,20 @@
+ *,
+ body,
+ html,
+ p,
+ span,
+ h1,
+ h2,
+ h3,
+ h4,
+ h5,
+ h6,
+ strong,
+ li {
+     --ion-font-family: 'Poppins';
+     font-family: 'Poppins';
+ }
+
+ .zmdi {
+     font: normal normal normal 14px/1 'Material-Design-Iconic-Font';
+ }

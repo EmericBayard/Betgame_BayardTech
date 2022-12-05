@@ -1,0 +1,11 @@
+export class Constants {
+    public static readonly AUTH = 'userData'
+    static KEY_DEFAULT_LANGUAGE: string = 'ob_dl';
+    static API_AUTH_TOKEN: string = 'eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiMmU2OTk3Y2NhOGIyYjU1MGUxYjAyMTAxNTI0MzViZTQxZWI3ZDBkOTE5ZTQwN2ViZjVjZjAxMmVhODMwNDJhMjBjZGE3MWRmNzhjMGJjODIiLCJpYXQiOjE2NjY3MzkwMzUsIm5iZiI6MTY2NjczOTAzNSwiZXhwIjoxNjk4Mjc1MDM1LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.rzfQd3dAUF6MM6gMMuDHH__k5_2uSx3IQZMZEcEjksEG6Fqsu5KtkIo88CUfUkqMRo9dybfVlwK0wV-M_suWSzr70or1DuqZ0_KqFDtr97X5nTmXIO9lJ4Sa23B5pMTOuGzxcXlm4RpfTSmq6WXK_KXSJE_OeV-yZ8AcTKLzG1cvjxeawiasozsIeuj2r5Z0rofrpH1UI-5uicgjZAQBClh0aOQayJZJDRyDPTf4YJ2H_hIrJP4a-NV8miSXD5gs5txO0VCuOdoZPCDRE2AxH5Zu0-bdA_mkXf-BTT1wWTtgZc7kO63-tP033bAGQvDiGalA33RTCdJoMUlkKSkxeY9809ScjZs4Q0w5jlQIyCBRZXTzsPdBQDiQ8XCEEkwSLA145aCZDExb9GDaDwfAIyasnBmMwgpdHg9xhruI2IAd2oGx8u1SZGLbvdZMF1Lztt48eBGRDKBLOdKs9hl2awERdC-xI2xqD8Y15agKOYvYvIAZtbPmwkfWpB5mlMPWKhpB9m22R8fz0bhYq0q-Skit7B0gwx938g2b7kheh9uRYNbmX-g5a__HAwjLZoZxryE-6Dn4KwalbWe89D2h3porJvfqNnZh5KQd6gwoe8JWptiCwTaNV_Psc6g_Tvpz37TZ1dmVs97S1vO9GfSvNpfFsi3OVCDu7d6rWJQPvuI';
+    static BASE_URL: string = 'https://preprodparten.fr/api/';
+
+
+    // Localstorage
+    static LS_TOKEN_KEY = "tokenAuth"
+    static LS_TOKEN_EXP_KEY = "tokenExpirationDate"
+}

@@ -1,0 +1,1280 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>
+            <div class="title-inner d-flex">
+                <h3 class="ion-text-center">{{'match_completed' | translate}}</h3>
+            </div>
+        </ion-title>
+    </ion-toolbar>
+
+    <div class="banner">
+        <div class="team-info">
+            <!--
+            <div class="league">
+                <h6>Premier {{'league' | translate}}</h6>
+            </div>
+-->
+            <ion-row>
+                <ion-col class="team_1 animate__animated animate__fadeInLeft wow" data-wow-duration=".2s" size="6">
+                    <div class="team-bg" style="background: linear-gradient(270deg, rgba(13,14,15,0) 10%, rgba(29,97,129,1) 100%);"></div>
+                    <div class="team-detail ion-padding-start">
+                        <h3 class="ion-text-start">Wolves United</h3>
+                        <div class="team-logo d-flex">
+                            <img src="assets/images/team_logo/team_8.png">&nbsp;&nbsp;
+                            <h4>WlS<span>1</span></h4>
+                        </div>
+                    </div>
+                </ion-col>
+
+                <div class="timeing animate__animated animate__zoomIn wow" data-wow-duration=".3s">
+                    <h6>90 mins</h6>
+                </div>
+
+                <ion-col class="d-flex team_2 animate__animated animate__fadeInRight wow" data-wow-duration=".2s" size="6">
+                    <div class="team-bg" style="background: linear-gradient(90deg, rgba(13,14,15,0) 10%, rgba(44,27,91,1) 100%);"></div>
+                    <div class="team-detail end ion-padding-end">
+                        <h3 class="ion-text-end">Cobra Guardians</h3>
+                        <div class="team-logo d-flex">
+                            <h4>CBR<span>3</span></h4>&nbsp;&nbsp;
+                            <img src="assets/images/team_logo/team_7.png">
+                        </div>
+                    </div>
+                </ion-col>
+            </ion-row>
+
+            <ion-segment mode="ios" (ionChange)="segmentChanged()" [(ngModel)]="segment" lines="none">
+                <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".2s" value="0">
+                    <ion-label class="ion-text-center">
+                        {{'winnings' | translate}}
+                    </ion-label>
+                </ion-segment-button>
+
+                <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".25s" value="1">
+                    <ion-label class="ion-text-center">
+                        {{'leaderboard' | translate}}
+                    </ion-label>
+                </ion-segment-button>
+
+                <ion-segment-button mode="ios" class="animate__animated animate__zoomIn wow" data-wow-duration=".25s" value="2">
+                    <ion-label class="ion-text-center">
+                        {{'states' | translate}}
+                    </ion-label>
+                </ion-segment-button>
+            </ion-segment>
+        </div>
+    </div>
+</ion-header>
+<div class="background center_img">
+    <img src="assets/images/ground.png" class="crop_img">
+</div>
+<ion-content class="bg_color">
+    <ion-slides #slides (ionSlideDidChange)="slideChanged()">
+        <ion-slide>
+            <ion-list lines="none">
+                <div class="list_header">
+                    <h2 class="d-flex">
+                        {{'rank' | translate}}
+                        <span class="end">{{'winnings' | translate}}</span>
+                    </h2>
+                </div>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">1
+                            <span class="end">$ 50,000</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">2
+                            <span class="end">$ 25,000</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">3
+                            <span class="end">$ 15,000</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">4
+                            <span class="end">$ 10,000</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">5
+                            <span class="end">$ 5,000</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">6
+                            <span class="end">$ 2,000</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">7
+                            <span class="end">$ 1,500</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">8
+                            <span class="end">$ 1,000</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">9
+                            <span class="end">$ 500</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">10
+                            <span class="end">$ 250</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">11 - 15
+                            <span class="end">$ 100</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">16 - 25
+                            <span class="end">$ 50</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">26 - 50
+                            <span class="end">$ 45</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">51 - 100
+                            <span class="end">$ 40</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">101 - 200
+                            <span class="end">$ 35</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">201- 500
+                            <span class="end">$ 30</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">501 - 1000
+                            <span class="end">$ 25</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">1001 - 2000
+                            <span class="end">$ 20</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">2001 - 3000
+                            <span class="end">$ 15</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">3001 - 4000
+                            <span class="end">$ 10</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">5001 - 5000
+                            <span class="end">$ 5</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">5001 - 6000
+                            <span class="end">$ 3</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">6001 - 7000
+                            <span class="end">$ 2</span>
+                        </h3>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner d-flex">
+                        <h4>#&nbsp;</h4>
+                        <h3 class="d-flex">7001 - 8000
+                            <span class="end">$ 1</span>
+                        </h3>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+
+        <ion-slide>
+            <ion-list class="leaderboard_list" lines="none">
+                <div class="list_header">
+                    <ion-row>
+                        <ion-col size="7">
+                            <h2>
+                                {{'all_teams' | translate}} (10,000)
+                            </h2>
+                        </ion-col>
+                        <ion-col>
+                            <h2 class="ion-text-center">
+                                {{'points' | translate}}
+                            </h2>
+                        </ion-col>
+                        <ion-col class="ion-text-end">
+                            <h2>
+                                #{{'rank' | translate}}
+                            </h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user1.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Samanthateteam123 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $25</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>202.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>2,551</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user2.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Daniel007 <span>(T2)</span></h3>
+                                    <h4>{{'won' | translate}} $50,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>365</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>1</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user3.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $25,0800</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>364.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>2</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user4.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Tomby001 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $15,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>345.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>3</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user5.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>KellySmith11team <span>(T5)</span></h3>
+                                    <h4>{{'won' | translate}} $10,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>319.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>4</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user6.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Team4Win <span>(T2)</span></h3>
+                                    <h4>{{'won' | translate}} $5,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>298</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>6</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user7.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                                    <h4>{{'won' | translate}} $1,500</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>297</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>7</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user8.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>LisaDevis2212 <span>(T7)</span></h3>
+                                    <h4>{{'won' | translate}} $1,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>296.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>8</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user9.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $500</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>235</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>5</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user10.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>DevilTeam077 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $250</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>277</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>9</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user1.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Samanthateteam123 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $25</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>202.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>2,551</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user2.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Daniel007 <span>(T2)</span></h3>
+                                    <h4>{{'won' | translate}} $50,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>365</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>1</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user3.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $25,0800</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>364.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>2</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user4.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Tomby001 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $15,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>345.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>3</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user5.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>KellySmith11team <span>(T5)</span></h3>
+                                    <h4>{{'won' | translate}} $10,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>319.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>4</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user6.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Team4Win <span>(T2)</span></h3>
+                                    <h4>{{'won' | translate}} $5,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>298</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>6</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user7.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                                    <h4>{{'won' | translate}} $1,500</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>297</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>7</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user8.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>LisaDevis2212 <span>(T7)</span></h3>
+                                    <h4>{{'won' | translate}} $1,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>296.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>8</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user9.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $500</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>235</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>5</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user10.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>DevilTeam077 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $250</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>277</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>9</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user1.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Samanthateteam123 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $25</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>202.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>2,551</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user2.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Daniel007 <span>(T2)</span></h3>
+                                    <h4>{{'won' | translate}} $50,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>365</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>1</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user3.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Emiliwilliamson111 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $25,0800</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>364.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>2</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user4.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Tomby001 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $15,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>345.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>3</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user5.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>KellySmith11team <span>(T5)</span></h3>
+                                    <h4>{{'won' | translate}} $10,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>319.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>4</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user6.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Team4Win <span>(T2)</span></h3>
+                                    <h4>{{'won' | translate}} $5,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>298</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>6</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user7.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>RoseTaylor1234 <span>(T3)</span></h3>
+                                    <h4>{{'won' | translate}} $1,500</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>297</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>7</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user8.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>LisaDevis2212 <span>(T7)</span></h3>
+                                    <h4>{{'won' | translate}} $1,000</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>296.5</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>8</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user9.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>Lindahayadon1098 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $500</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>235</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>5</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/users/user10.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>DevilTeam077 <span>(T1)</span></h3>
+                                    <h4>{{'won' | translate}} $250</h4>
+                                </div>
+                            </ion-col>
+                            <ion-col class="ion-text-center">
+                                <h3>277</h3>
+                            </ion-col>
+                            <ion-col class="ion-text-end">
+                                <h3>9</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+            </ion-list>
+        </ion-slide>
+
+
+
+        <ion-slide>
+            <ion-list class="players_list" lines="none">
+                <div class="list_header">
+                    <ion-row>
+                        <ion-col size="7">
+                            <h2>
+                                {{'players' | translate}}
+                            </h2>
+                        </ion-col>
+                        <ion-col>
+                            <h2 class="ion-text-center">
+                                {{'points' | translate}}
+                            </h2>
+                        </ion-col>
+                        <ion-col class="ion-text-end">
+                            <h2>
+                                {{'sel_by' | translate}}
+                            </h2>
+                        </ion-col>
+                    </ion-row>
+                </div>
+
+
+                <ion-item class="animate__animated animate__fadeInUp active"  (click)="player_performance()">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player4.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>R Jackson</h3>
+                                    <h4><span style="color: #20B1F2;">WLS</span> | GK</h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">123.0</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-end">55.9%</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp"  (click)="player_performance()">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player6.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>J Caven</h3>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> | DEF</h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">98.0</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-end">41.0%</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp active"  (click)="player_performance()">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player1.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>P Williamson</h3>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> DEF </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">91.0</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-end">23.5%</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp active"  (click)="player_performance()">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player2.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>B Cordero</h3>
+                                    <h4><span style="color: #20B1F2;">WLS</span> | DEF</h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">88.0</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-end">11.2%</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp"  (click)="player_performance()">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player7.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>J Donald</h3>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> | MID </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">58.5</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-end">0.5%</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp"  (click)="player_performance()"> 
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player8.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>R Simmons</h3>
+                                    <h4><span style="color: #20B1F2;">WLS</span> | MID </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">49.5</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-end">90.1%</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp active"  (click)="player_performance()">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player5.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>K Simmons</h3>
+                                    <h4><span style="color: #20B1F2;">WLS</span> | MId </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">33.0</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-end">50.0%</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+
+                <ion-item class="animate__animated animate__fadeInUp"  (click)="player_performance()">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player10.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>W Ubon</h3>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> | MID</h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">15.0</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-end">33.3%</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp active"  (click)="player_performance()">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>P Johns</h3>
+                                    <h4><span style="color: #20B1F2;">WLS</span> | DEF </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">33.0</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-end">50.0%</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp"  (click)="player_performance()">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player11.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>D Danie</h3>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> | DEF</h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">-5.0</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-end">10.5%</h3>
+                            </ion-col>
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+                <ion-item class="animate__animated animate__fadeInUp" (click)="player_performance()">
+                    <div class="item-inner">
+                        <ion-row>
+                            <ion-col class="d-flex" size="7">
+                                <div class="img_box center_img">
+                                    <img src="assets/images/players/player9.png" class="crop_img">
+                                </div>
+                                <div class="text_box">
+                                    <h3>L Opero</h3>
+                                    <h4><span style="color: #9C7DFD;">CBR</span> | DEF </h4>
+                                </div>
+                            </ion-col>
+
+                            <ion-col>
+                                <h3 class="ion-text-center">-3.0</h3>
+                            </ion-col>
+
+                            <ion-col>
+                                 <h3 class="ion-text-end">15.5%</h3>
+                            </ion-col> 
+                        </ion-row>
+                    </div>
+                </ion-item>
+
+            </ion-list>
+        </ion-slide>
+    </ion-slides>
+
+</ion-content>

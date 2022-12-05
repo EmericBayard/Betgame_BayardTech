@@ -1,0 +1,417 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title>Wallet <b>{{playerName}}</b></ion-title>
+    </ion-toolbar>
+
+    <div class="page-title">
+        <h2 class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">159.50 B</h2>
+        <h3 class="animate__animated animate__fadeInUp wow" data-wow-duration=".55s">Solde disponible</h3>
+    </div>
+    <div style="
+    width: 90vw;
+    height: 5vh;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-content: center;
+    justify-content: space-around;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 3%;
+    margin-top: 3%;
+    ">
+        <button style="border-radius: 10px 10px;width: 30%;">
+            + Acheter
+        </button>
+        <button style="border-radius: 10px 10px;width: 30%;">
+            - Vendre
+        </button>
+        <button style="border-radius: 10px 10px;width: 30%;">
+           -> Boutique
+        </button>
+    </div>
+</ion-header>
+
+
+<ion-content class="bg_color" fullscreen>
+    <div class="background center_img">
+        <img src="assets/images/bg.png" class="crop_img">
+    </div>
+
+    <div class="content-inner" style="height:100%;overflow-y: scroll;">
+        <div style="width:90%;display:flex;justify-content:center;margin-right:5%;margin-left:4%;z-index:99;margin-top: 5%;
+       margin-bottom:10%;height:40%;">
+            <canvas #lineCanvas ></canvas>
+        </div>
+        <div>
+            <div style="
+            background:grey;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            align-content: center;
+            justify-content: space-evenly;
+            width: 80%;
+            height: 4vh;
+            margin-left: auto;
+            margin-right: auto;
+            border-radius: 10px 10px;
+            margin-bottom:10%;">
+                <button style="color:grey;background:white;border-radius: 10px 10px;width: 15%;">1j</button>
+                <button style="color:grey;background:white;border-radius: 10px 10px;width: 15%;">1s</button>
+                <button style="color:grey;background:white;border-radius: 10px 10px;width: 15%;">1m</button>
+                <button style="color:grey;background:white;border-radius: 10px 10px;width: 15%;">3m</button>
+                <button style="color:grey;background:white;border-radius: 10px 10px;width: 15%;">6m</button>
+                <button style="color:grey;background:white;border-radius: 10px 10px;width: 15%;">1a</button>
+            </div>
+            <div style="width:90%; color:rgba(198, 234, 206, 1);margin-left:auto;margin-right:auto;text-align:center;margin-bottom:25%;">Les données affichées ci-dessus sont fournies à titre indicatif uniquement. Le prix d'exécution réel peut varier. Les performances passées ne sont pas un indicateur des performances futures</div>
+        </div>
+
+      <h2 class="animate__animated animate__fadeInUp" style="color: white;margin-left: 5px">HISTORIQUE D’ACTIONS</h2>
+
+      <ion-list lines="none">
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Prix d'entrée tournoi d'ouverture <span class="end">4.00 B</span> </h2>
+                    <h3 class="d-flex">Tournoi d'ouverture<span class="end">21 Juin, 11:02</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">1ère place tournoi FootLocker<span class="end">200.00 B</span> </h2>
+                    <h3 class="d-flex">FootLocker <span class="end">20 Juin, 11:00</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">1ère place tournoi Classico<span class="end">24.00 B</span> </h2>
+                    <h3 class="d-flex">Classico <span class="end">13 Juin, 2:32</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Prix d'entrée tournoi C1<span class="end">50.00 B</span> </h2>
+                    <h3 class="d-flex">C1 <span class="end">06 Juin, 07:09</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Prix d'entrée tournoi L2<span class="end">50.00 B</span> </h2>
+                    <h3 class="d-flex">L2 <span class="end">01 Juin, 10:02</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">2ème place tournoi L2<span class="end">20.00 B</span> </h2>
+                    <h3 class="d-flex">L2<span class="end">26 Mai, 9:58</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Gain du défi contre Manzibar<span class="end">100.00 B</span> </h2>
+                    <h3 class="d-flex">Défi 1 vs 1 <span class="end">26 Mai, 10:00</span></h3>
+                </div>
+            </ion-item>
+
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">4.00 B</span> </h2>
+                    <h3 class="d-flex">WLS vs CBR <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">200.00 B</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">24.00 B</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">13 Jun, 2:32 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">50.00 B</span> </h2>
+                    <h3 class="d-flex">BLB vs PPD <span class="end">06 Jun, 07:09 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">50.00 B</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">20.00 B</span> </h2>
+                    <h3 class="d-flex">WLS vs GGS <span class="end">26 May, 9:58 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">100.00 B</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">26 May, 10:00 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">4.00 B</span> </h2>
+                    <h3 class="d-flex">WLS vs CBR <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">200.00 B</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">24.00 B</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">13 Jun, 2:32 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$50.00</span> </h2>
+                    <h3 class="d-flex">BLB vs PPD <span class="end">06 Jun, 07:09 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$50.00</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">$20.00</span> </h2>
+                    <h3 class="d-flex">WLS vs GGS <span class="end">26 May, 9:58 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">$100.00</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">26 May, 10:00 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$4.00</span> </h2>
+                    <h3 class="d-flex">WLS vs CBR <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">$200.00</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">$24.00</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">13 Jun, 2:32 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$50.00</span> </h2>
+                    <h3 class="d-flex">BLB vs PPD <span class="end">06 Jun, 07:09 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$50.00</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">$20.00</span> </h2>
+                    <h3 class="d-flex">WLS vs GGS <span class="end">26 May, 9:58 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">$100.00</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">26 May, 10:00 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$4.00</span> </h2>
+                    <h3 class="d-flex">WLS vs CBR <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">$200.00</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">$24.00</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">13 Jun, 2:32 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$50.00</span> </h2>
+                    <h3 class="d-flex">BLB vs PPD <span class="end">06 Jun, 07:09 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$50.00</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">$20.00</span> </h2>
+                    <h3 class="d-flex">WLS vs GGS <span class="end">26 May, 9:58 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">$100.00</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">26 May, 10:00 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$4.00</span> </h2>
+                    <h3 class="d-flex">WLS vs CBR <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">$200.00</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">$24.00</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">13 Jun, 2:32 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$50.00</span> </h2>
+                    <h3 class="d-flex">BLB vs PPD <span class="end">06 Jun, 07:09 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$50.00</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">$20.00</span> </h2>
+                    <h3 class="d-flex">WLS vs GGS <span class="end">26 May, 9:58 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">$100.00</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">26 May, 10:00 pm</span></h3>
+                </div>
+            </ion-item>
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$4.00</span> </h2>
+                    <h3 class="d-flex">WLS vs CBR <span class="end">21 Jun, 11:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">$200.00</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">20 Jun, 11:00 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">$24.00</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">13 Jun, 2:32 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$50.00</span> </h2>
+                    <h3 class="d-flex">BLB vs PPD <span class="end">06 Jun, 07:09 pm</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp">
+                <div class="item-inner">
+                    <h2 class="d-flex"> Joined a Contest <span class="end">$50.00</span> </h2>
+                    <h3 class="d-flex">MXT vs SKC <span class="end">01 Jun, 10:02 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Won a Contest<span class="end">$20.00</span> </h2>
+                    <h3 class="d-flex">WLS vs GGS <span class="end">26 May, 9:58 am</span></h3>
+                </div>
+            </ion-item>
+
+            <ion-item class="animate__animated animate__fadeInUp added_to_wallet">
+                <div class="item-inner">
+                    <h2 class="d-flex">Added to Wallet<span class="end">$100.00</span> </h2>
+                    <h3 class="d-flex">Bank of USA <span class="end">26 May, 10:00 pm</span></h3>
+                </div>
+            </ion-item>
+        </ion-list>
+    </div>
+</ion-content>
+<!--<custom-tabs style="bottom: 0;z-index: 100000000000000" ></custom-tabs>-->

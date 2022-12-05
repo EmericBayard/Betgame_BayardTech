@@ -1,0 +1,31 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-buttons slot="start" mode="md">
+            <ion-back-button text="" icon="chevron-back-outline"></ion-back-button>
+        </ion-buttons>
+        <ion-title></ion-title>
+    </ion-toolbar>
+
+    <div class="page-title">
+        <h2 class="animate__animated animate__fadeInUp wow" data-wow-duration="0.5s">{{'language' | translate}}</h2>
+        <h3 class="animate__animated animate__fadeInUp wow" data-wow-duration=".8s">{{'preferred_langauge' | translate}}</h3>
+    </div>
+</ion-header>
+
+<ion-content class="bg_color" fullscreen>
+    <div class="content-inner">
+        <ion-list lines="none">
+            <h2>{{'select_preferred_language' | translate}}</h2>
+            <ion-radio-group [(ngModel)]="defaultLanguageCode">
+                <ion-item *ngFor="let language of languages" (click)="onLanguageClick(language)" class="animate__animated animate__fadeInUp wow">
+                    <div class="item_inner d-flex">
+                        <ion-radio value="{{language.code}}"></ion-radio>
+                        <h3>{{language.name}}</h3>
+                    </div>
+                </ion-item> 
+            </ion-radio-group>
+        </ion-list>
+
+        <ion-button size="large" class="btn animate__animated animate__slideInUp wow" data-wow-duration=".6s" expand="round" (click)="languageConfirm()">{{'submit' | translate}}</ion-button>
+    </div>
+</ion-content>

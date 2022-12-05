@@ -1,0 +1,40 @@
+ion-content {
+    border-radius: 25px 25px 0 0;
+    overflow: hidden;
+    --background: var(--transparent) !important;
+}
+
+
+ 
+
+.content-inner {
+    position: relative;
+    min-height: calc(100vh - 172.2px);
+    max-height: calc(100vh - 172.2px);
+    overflow: hidden;
+    overflow-y: auto;
+    z-index: 11;
+    background: var(--secondary);
+    padding-top: 32px;
+
+    .text_box {
+        padding: 0px 22px 0px 22px;
+
+        h2 {
+            margin: 0;
+            color: var(--text-dark);
+            font-size: 1rem;
+            padding-bottom: 20px;
+        }
+
+        p {
+            color: var(--white);
+            font-size: 0.85rem;
+            font-weight: 300;
+            line-height: 25px;
+            margin: 0;
+            padding-bottom: 20px;
+
+        }
+    }
+}

@@ -1,0 +1,18 @@
+
+ion-tabs {
+bottom: 0;
+  box-sizing: inherit;
+  --bgColorMenu : #000000;
+  --duration: .7s;
+  --test:0;
+  margin: 0;
+  display: flex;
+  overflow: hidden;
+  justify-content: center;
+  -webkit-tap-highlight-color: transparent;
+  transition: background-color .7s;
+}
+
+
+
+
